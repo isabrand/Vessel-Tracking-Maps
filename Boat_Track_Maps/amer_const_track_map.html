@@ -1,0 +1,3076 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_60c1f18370e1729e6d63d6d04af7bb3b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+        <div style="position: fixed; 
+                    top: 10px; left: 500px; width: 200px; height: auto; 
+                    background-color: white; border:2px solid grey; z-index:9999; 
+                    font-size:14px; padding: 10px">
+        <p><b>Track Legend</b></p>
+        <p><i class="fa fa-circle" style="color:blue"></i> Track 47449460 (ais)</p></div>
+    
+            <div class="folium-map" id="map_60c1f18370e1729e6d63d6d04af7bb3b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_60c1f18370e1729e6d63d6d04af7bb3b = L.map(
+                "map_60c1f18370e1729e6d63d6d04af7bb3b",
+                {
+                    center: [48.56162777777779, -123.18956904761905],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_43810e452a25f97a812450edbc33f00f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_43810e452a25f97a812450edbc33f00f.addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+            var marker_87a3057b19a4b805b6041280d927fa68 = L.marker(
+                [48.5615, -123.1848],
+                {
+}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+            var icon_d08a79f92a75e59ae4d8f089c9105d43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_87a3057b19a4b805b6041280d927fa68.setIcon(icon_d08a79f92a75e59ae4d8f089c9105d43);
+        
+    
+        var popup_a082cf781b35309aa94c59eeda14b1a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dcc2c4cad3879f6f1797f15d06b4c4b3 = $(`<div id="html_dcc2c4cad3879f6f1797f15d06b4c4b3" style="width: 100.0%; height: 100.0%;">Anchor Drop Point from Kittiwake</div>`)[0];
+                popup_a082cf781b35309aa94c59eeda14b1a3.setContent(html_dcc2c4cad3879f6f1797f15d06b4c4b3);
+            
+        
+
+        marker_87a3057b19a4b805b6041280d927fa68.bindPopup(popup_a082cf781b35309aa94c59eeda14b1a3)
+        ;
+
+        
+    
+    
+            var poly_line_83862c6eca845899c3234817048ac115 = L.polyline(
+                [[48.596, -123.2091], [48.5955, -123.2091], [48.5949, -123.2091], [48.5946, -123.209], [48.5939, -123.2089], [48.5933, -123.2088], [48.5927, -123.2087], [48.5922, -123.2086], [48.5914, -123.2085], [48.5904, -123.2082], [48.5897, -123.208], [48.5891, -123.2078], [48.5885, -123.2076], [48.588, -123.2075], [48.5875, -123.2073], [48.5871, -123.2071], [48.5866, -123.2068], [48.5862, -123.2067], [48.5857, -123.2063], [48.585, -123.206], [48.5845, -123.2057], [48.5841, -123.2055], [48.5837, -123.2053], [48.5827, -123.2048], [48.5824, -123.2046], [48.582, -123.2044], [48.5818, -123.2042], [48.5812, -123.2038], [48.581, -123.2036], [48.5804, -123.2032], [48.5801, -123.2029], [48.5795, -123.2025], [48.5786, -123.2018], [48.5781, -123.2014], [48.5775, -123.201], [48.5774, -123.2009], [48.5767, -123.2004], [48.5762, -123.2001], [48.5757, -123.1997], [48.5752, -123.1995], [48.5745, -123.199], [48.5739, -123.1986], [48.5735, -123.1983], [48.5729, -123.1979], [48.5723, -123.1975], [48.5718, -123.1971], [48.5712, -123.1967], [48.5707, -123.1964], [48.5701, -123.196], [48.5695, -123.1955], [48.569, -123.1952], [48.5685, -123.1948], [48.5678, -123.1943], [48.5674, -123.1941], [48.5667, -123.1936], [48.5662, -123.1933], [48.5656, -123.1928], [48.5651, -123.1925], [48.5644, -123.1919], [48.5639, -123.1916], [48.5634, -123.1912], [48.5628, -123.1908], [48.5623, -123.1904], [48.5618, -123.1901], [48.5611, -123.1896], [48.5607, -123.1893], [48.5601, -123.1889], [48.5595, -123.1884], [48.559, -123.188], [48.5585, -123.1877], [48.558, -123.1872], [48.557, -123.1865], [48.5563, -123.1859], [48.556, -123.1857], [48.5553, -123.1852], [48.5548, -123.1847], [48.5542, -123.1844], [48.5535, -123.1838], [48.5531, -123.1835], [48.5528, -123.1833], [48.5521, -123.1828], [48.5515, -123.1824], [48.5509, -123.182], [48.5506, -123.1817], [48.5498, -123.1812], [48.5494, -123.1809], [48.5489, -123.1805], [48.5483, -123.1801], [48.5476, -123.1796], [48.5473, -123.1794], [48.5465, -123.1789], [48.546, -123.1786], [48.5455, -123.1784], [48.5451, -123.1781], [48.5447, -123.1779], [48.5444, -123.1776], [48.5438, -123.1773], [48.5432, -123.1769], [48.5427, -123.1766], [48.5421, -123.1762], [48.5418, -123.1759], [48.5413, -123.1756], [48.5405, -123.1751], [48.54, -123.1747], [48.5394, -123.1744], [48.5388, -123.174], [48.5384, -123.1738], [48.5377, -123.1733], [48.5372, -123.173], [48.5365, -123.1725], [48.536, -123.1722], [48.5355, -123.1718], [48.5339, -123.1707], [48.5332, -123.1703], [48.5325, -123.1698], [48.532, -123.1695], [48.5315, -123.1692], [48.5309, -123.1688], [48.5305, -123.1686], [48.5292, -123.1677], [48.5287, -123.1674], [48.5265, -123.1658], [48.5258, -123.1652], [48.5254, -123.1649], [48.5249, -123.1644], [48.5243, -123.1639]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 4}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_49dcc70188f21364bfca65415fb2c576 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73e021c36f39a55eb49a45930ecef573 = $(`<div id="html_73e021c36f39a55eb49a45930ecef573" style="width: 100.0%; height: 100.0%;">Track: 47449460<br>Points: 126</div>`)[0];
+                popup_49dcc70188f21364bfca65415fb2c576.setContent(html_73e021c36f39a55eb49a45930ecef573);
+            
+        
+
+        poly_line_83862c6eca845899c3234817048ac115.bindPopup(popup_49dcc70188f21364bfca65415fb2c576)
+        ;
+
+        
+    
+    
+            var marker_8ece36dd9d0d71308c73070875c738a0 = L.marker(
+                [48.596, -123.2091],
+                {
+}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+            var icon_76c9adab7e9d31b8ed977630a0afa721 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "play",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8ece36dd9d0d71308c73070875c738a0.setIcon(icon_76c9adab7e9d31b8ed977630a0afa721);
+        
+    
+        var popup_9f0899af0665e7aa215e848748a1032d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bc74ce249cf84083c3ae85bf575de89d = $(`<div id="html_bc74ce249cf84083c3ae85bf575de89d" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 1/126<br>                 Date: 2025-10-15 08:02:26<br>                 Speed: 12.5 knots<br>                 Course: 179.1°<br>                 Lat: 48.5960<br>                 Lon: -123.2091                 </div>`)[0];
+                popup_9f0899af0665e7aa215e848748a1032d.setContent(html_bc74ce249cf84083c3ae85bf575de89d);
+            
+        
+
+        marker_8ece36dd9d0d71308c73070875c738a0.bindPopup(popup_9f0899af0665e7aa215e848748a1032d)
+        ;
+
+        
+    
+    
+            var circle_marker_bbb306213934c5813769e159585dd7fd = L.circleMarker(
+                [48.5955, -123.2091],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_9c9c6406ae6ab45e03f48d919bcc66cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc534f7b9d19092c312924e3541baefe = $(`<div id="html_fc534f7b9d19092c312924e3541baefe" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 2/126<br>                 Date: 2025-10-15 08:02:35<br>                 Speed: 12.5 knots<br>                 Course: 178.1°<br>                 Lat: 48.5955<br>                 Lon: -123.2091                 </div>`)[0];
+                popup_9c9c6406ae6ab45e03f48d919bcc66cc.setContent(html_fc534f7b9d19092c312924e3541baefe);
+            
+        
+
+        circle_marker_bbb306213934c5813769e159585dd7fd.bindPopup(popup_9c9c6406ae6ab45e03f48d919bcc66cc)
+        ;
+
+        
+    
+    
+            var circle_marker_02cdc1a1f24c6b44bafc666a569a3594 = L.circleMarker(
+                [48.5949, -123.2091],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_3a795bee0ea56d1b49e7653d62049305 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fef31a3ebdfd39b91fa58b585083eead = $(`<div id="html_fef31a3ebdfd39b91fa58b585083eead" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 3/126<br>                 Date: 2025-10-15 08:02:42<br>                 Speed: 12.6 knots<br>                 Course: 176.9°<br>                 Lat: 48.5949<br>                 Lon: -123.2091                 </div>`)[0];
+                popup_3a795bee0ea56d1b49e7653d62049305.setContent(html_fef31a3ebdfd39b91fa58b585083eead);
+            
+        
+
+        circle_marker_02cdc1a1f24c6b44bafc666a569a3594.bindPopup(popup_3a795bee0ea56d1b49e7653d62049305)
+        ;
+
+        
+    
+    
+            var circle_marker_bea9e1002b19df0b769b888934b59d7b = L.circleMarker(
+                [48.5946, -123.209],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_2136144e436818f510b535861af90ea0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89b4c5df0bca35ec05f7b34a91852217 = $(`<div id="html_89b4c5df0bca35ec05f7b34a91852217" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 4/126<br>                 Date: 2025-10-15 08:02:50<br>                 Speed: 12.7 knots<br>                 Course: 175.7°<br>                 Lat: 48.5946<br>                 Lon: -123.2090                 </div>`)[0];
+                popup_2136144e436818f510b535861af90ea0.setContent(html_89b4c5df0bca35ec05f7b34a91852217);
+            
+        
+
+        circle_marker_bea9e1002b19df0b769b888934b59d7b.bindPopup(popup_2136144e436818f510b535861af90ea0)
+        ;
+
+        
+    
+    
+            var circle_marker_372fad31f0c1405c8dd1ea041f042c0a = L.circleMarker(
+                [48.5939, -123.2089],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_f0761ca6b1fe03b11b6a91cfc4c0ab12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a1dafa6caab27ecccabf0bcb768b0e06 = $(`<div id="html_a1dafa6caab27ecccabf0bcb768b0e06" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 5/126<br>                 Date: 2025-10-15 08:03:01<br>                 Speed: 12.7 knots<br>                 Course: 174.9°<br>                 Lat: 48.5939<br>                 Lon: -123.2089                 </div>`)[0];
+                popup_f0761ca6b1fe03b11b6a91cfc4c0ab12.setContent(html_a1dafa6caab27ecccabf0bcb768b0e06);
+            
+        
+
+        circle_marker_372fad31f0c1405c8dd1ea041f042c0a.bindPopup(popup_f0761ca6b1fe03b11b6a91cfc4c0ab12)
+        ;
+
+        
+    
+    
+            var circle_marker_adbcf45844a1f86aaa8bc3541fde59af = L.circleMarker(
+                [48.5933, -123.2088],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_c7d75015f669061a70f15124811f8b7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f90f7a54667d817c2c122762ca274967 = $(`<div id="html_f90f7a54667d817c2c122762ca274967" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 6/126<br>                 Date: 2025-10-15 08:03:12<br>                 Speed: 12.8 knots<br>                 Course: 173.8°<br>                 Lat: 48.5933<br>                 Lon: -123.2088                 </div>`)[0];
+                popup_c7d75015f669061a70f15124811f8b7f.setContent(html_f90f7a54667d817c2c122762ca274967);
+            
+        
+
+        circle_marker_adbcf45844a1f86aaa8bc3541fde59af.bindPopup(popup_c7d75015f669061a70f15124811f8b7f)
+        ;
+
+        
+    
+    
+            var circle_marker_6bf09461d3f43b9cc96283a842781a3c = L.circleMarker(
+                [48.5927, -123.2087],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8d68baba7921b3bab32c99b5719ee619 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f02992c5afac7730776af4e3c679b9e6 = $(`<div id="html_f02992c5afac7730776af4e3c679b9e6" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 7/126<br>                 Date: 2025-10-15 08:03:22<br>                 Speed: 12.8 knots<br>                 Course: 173.3°<br>                 Lat: 48.5927<br>                 Lon: -123.2087                 </div>`)[0];
+                popup_8d68baba7921b3bab32c99b5719ee619.setContent(html_f02992c5afac7730776af4e3c679b9e6);
+            
+        
+
+        circle_marker_6bf09461d3f43b9cc96283a842781a3c.bindPopup(popup_8d68baba7921b3bab32c99b5719ee619)
+        ;
+
+        
+    
+    
+            var circle_marker_971d30342bf718064fed23d4c289a08d = L.circleMarker(
+                [48.5922, -123.2086],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_1b83881106bf43cbf6b44f36e583f1dd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44f2d1fda6d0a9550cc4f527c6464ea8 = $(`<div id="html_44f2d1fda6d0a9550cc4f527c6464ea8" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 8/126<br>                 Date: 2025-10-15 08:03:30<br>                 Speed: 12.8 knots<br>                 Course: 172.1°<br>                 Lat: 48.5922<br>                 Lon: -123.2086                 </div>`)[0];
+                popup_1b83881106bf43cbf6b44f36e583f1dd.setContent(html_44f2d1fda6d0a9550cc4f527c6464ea8);
+            
+        
+
+        circle_marker_971d30342bf718064fed23d4c289a08d.bindPopup(popup_1b83881106bf43cbf6b44f36e583f1dd)
+        ;
+
+        
+    
+    
+            var circle_marker_120e3ec3d33ffd3312c887f08100ede1 = L.circleMarker(
+                [48.5914, -123.2085],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_f3b6612b422fd671e7122584e20bc9a3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fadaf96e58c197776fd827ddc68d3b23 = $(`<div id="html_fadaf96e58c197776fd827ddc68d3b23" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 9/126<br>                 Date: 2025-10-15 08:03:42<br>                 Speed: 12.9 knots<br>                 Course: 171.3°<br>                 Lat: 48.5914<br>                 Lon: -123.2085                 </div>`)[0];
+                popup_f3b6612b422fd671e7122584e20bc9a3.setContent(html_fadaf96e58c197776fd827ddc68d3b23);
+            
+        
+
+        circle_marker_120e3ec3d33ffd3312c887f08100ede1.bindPopup(popup_f3b6612b422fd671e7122584e20bc9a3)
+        ;
+
+        
+    
+    
+            var circle_marker_9e00b4a03837a83f0ed786da7071120a = L.circleMarker(
+                [48.5904, -123.2082],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_d95d56c0072b9e64faf2c0fca3a840cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3e0283900696ed3c44d70bbf4dc59fc = $(`<div id="html_e3e0283900696ed3c44d70bbf4dc59fc" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 10/126<br>                 Date: 2025-10-15 08:04:01<br>                 Speed: 13.0 knots<br>                 Course: 169.4°<br>                 Lat: 48.5904<br>                 Lon: -123.2082                 </div>`)[0];
+                popup_d95d56c0072b9e64faf2c0fca3a840cd.setContent(html_e3e0283900696ed3c44d70bbf4dc59fc);
+            
+        
+
+        circle_marker_9e00b4a03837a83f0ed786da7071120a.bindPopup(popup_d95d56c0072b9e64faf2c0fca3a840cd)
+        ;
+
+        
+    
+    
+            var circle_marker_f80494cb5647e578f719e130500454ea = L.circleMarker(
+                [48.5897, -123.208],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_423577ce2f0059a7d53a8a7130486f85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d354e34e527aaa2561b7c2def516f1c = $(`<div id="html_9d354e34e527aaa2561b7c2def516f1c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 11/126<br>                 Date: 2025-10-15 08:04:12<br>                 Speed: 13.0 knots<br>                 Course: 169.0°<br>                 Lat: 48.5897<br>                 Lon: -123.2080                 </div>`)[0];
+                popup_423577ce2f0059a7d53a8a7130486f85.setContent(html_9d354e34e527aaa2561b7c2def516f1c);
+            
+        
+
+        circle_marker_f80494cb5647e578f719e130500454ea.bindPopup(popup_423577ce2f0059a7d53a8a7130486f85)
+        ;
+
+        
+    
+    
+            var circle_marker_6895e50b35082cbf84b13f418cd80d5a = L.circleMarker(
+                [48.5891, -123.2078],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_98b999e58c73753b3f570ccc6df5ee50 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e66547529ef87a6e567d9bf70d87169d = $(`<div id="html_e66547529ef87a6e567d9bf70d87169d" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 12/126<br>                 Date: 2025-10-15 08:04:22<br>                 Speed: 13.1 knots<br>                 Course: 168.3°<br>                 Lat: 48.5891<br>                 Lon: -123.2078                 </div>`)[0];
+                popup_98b999e58c73753b3f570ccc6df5ee50.setContent(html_e66547529ef87a6e567d9bf70d87169d);
+            
+        
+
+        circle_marker_6895e50b35082cbf84b13f418cd80d5a.bindPopup(popup_98b999e58c73753b3f570ccc6df5ee50)
+        ;
+
+        
+    
+    
+            var circle_marker_f2f2110bedc56357c61cbfad412c46f2 = L.circleMarker(
+                [48.5885, -123.2076],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_45f87e70258ddc351e00622759003266 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a072b849d73398ddcd37f33cfa04537c = $(`<div id="html_a072b849d73398ddcd37f33cfa04537c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 13/126<br>                 Date: 2025-10-15 08:04:32<br>                 Speed: 13.1 knots<br>                 Course: 167.9°<br>                 Lat: 48.5885<br>                 Lon: -123.2076                 </div>`)[0];
+                popup_45f87e70258ddc351e00622759003266.setContent(html_a072b849d73398ddcd37f33cfa04537c);
+            
+        
+
+        circle_marker_f2f2110bedc56357c61cbfad412c46f2.bindPopup(popup_45f87e70258ddc351e00622759003266)
+        ;
+
+        
+    
+    
+            var circle_marker_f38fce6eadda36da136e45b835e67c51 = L.circleMarker(
+                [48.588, -123.2075],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_4bfb891ef265650d0cf9173f15474378 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c3fcd5e8f8cf8bc64893485cfe33fc4f = $(`<div id="html_c3fcd5e8f8cf8bc64893485cfe33fc4f" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 14/126<br>                 Date: 2025-10-15 08:04:42<br>                 Speed: 13.1 knots<br>                 Course: 166.3°<br>                 Lat: 48.5880<br>                 Lon: -123.2075                 </div>`)[0];
+                popup_4bfb891ef265650d0cf9173f15474378.setContent(html_c3fcd5e8f8cf8bc64893485cfe33fc4f);
+            
+        
+
+        circle_marker_f38fce6eadda36da136e45b835e67c51.bindPopup(popup_4bfb891ef265650d0cf9173f15474378)
+        ;
+
+        
+    
+    
+            var circle_marker_fa376a7d39766bfee4374a2f7c7d14f3 = L.circleMarker(
+                [48.5875, -123.2073],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_6057c6a0deeccd54c9640ac985987d87 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6e712c0acc04ae173f72366017aa73d8 = $(`<div id="html_6e712c0acc04ae173f72366017aa73d8" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 15/126<br>                 Date: 2025-10-15 08:04:48<br>                 Speed: 13.0 knots<br>                 Course: 165.8°<br>                 Lat: 48.5875<br>                 Lon: -123.2073                 </div>`)[0];
+                popup_6057c6a0deeccd54c9640ac985987d87.setContent(html_6e712c0acc04ae173f72366017aa73d8);
+            
+        
+
+        circle_marker_fa376a7d39766bfee4374a2f7c7d14f3.bindPopup(popup_6057c6a0deeccd54c9640ac985987d87)
+        ;
+
+        
+    
+    
+            var circle_marker_8a88d86436bcac98ea1cd0212f531a54 = L.circleMarker(
+                [48.5871, -123.2071],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_443d8bab01a5c0bab471a08b2317064f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3eefdf9e8d61faa057736fa825e6eb23 = $(`<div id="html_3eefdf9e8d61faa057736fa825e6eb23" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 16/126<br>                 Date: 2025-10-15 08:04:57<br>                 Speed: 13.0 knots<br>                 Course: 161.8°<br>                 Lat: 48.5871<br>                 Lon: -123.2071                 </div>`)[0];
+                popup_443d8bab01a5c0bab471a08b2317064f.setContent(html_3eefdf9e8d61faa057736fa825e6eb23);
+            
+        
+
+        circle_marker_8a88d86436bcac98ea1cd0212f531a54.bindPopup(popup_443d8bab01a5c0bab471a08b2317064f)
+        ;
+
+        
+    
+    
+            var circle_marker_70a47b49d30b3242252af4ba0785ee17 = L.circleMarker(
+                [48.5866, -123.2068],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_7ad38a55aedf890fe2892f75aacb6c34 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6333dea7190f92e8a83a20062c25e60b = $(`<div id="html_6333dea7190f92e8a83a20062c25e60b" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 17/126<br>                 Date: 2025-10-15 08:05:06<br>                 Speed: 12.9 knots<br>                 Course: 160.9°<br>                 Lat: 48.5866<br>                 Lon: -123.2068                 </div>`)[0];
+                popup_7ad38a55aedf890fe2892f75aacb6c34.setContent(html_6333dea7190f92e8a83a20062c25e60b);
+            
+        
+
+        circle_marker_70a47b49d30b3242252af4ba0785ee17.bindPopup(popup_7ad38a55aedf890fe2892f75aacb6c34)
+        ;
+
+        
+    
+    
+            var circle_marker_b2e164183e5e4873b4d2f28696c4d2d1 = L.circleMarker(
+                [48.5862, -123.2067],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_0588e038036a34fc3e984bd3881f80be = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45fa60b3e4ba71e169c7b75edf6ef298 = $(`<div id="html_45fa60b3e4ba71e169c7b75edf6ef298" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 18/126<br>                 Date: 2025-10-15 08:05:12<br>                 Speed: 13.0 knots<br>                 Course: 160.0°<br>                 Lat: 48.5862<br>                 Lon: -123.2067                 </div>`)[0];
+                popup_0588e038036a34fc3e984bd3881f80be.setContent(html_45fa60b3e4ba71e169c7b75edf6ef298);
+            
+        
+
+        circle_marker_b2e164183e5e4873b4d2f28696c4d2d1.bindPopup(popup_0588e038036a34fc3e984bd3881f80be)
+        ;
+
+        
+    
+    
+            var circle_marker_1a467416d5899c90abb4dde579b4b8d4 = L.circleMarker(
+                [48.5857, -123.2063],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_9c13f31635851418faf79a1e3b3cc09d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_46f9579ef3f4b7e5efcfe550210e9ea7 = $(`<div id="html_46f9579ef3f4b7e5efcfe550210e9ea7" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 19/126<br>                 Date: 2025-10-15 08:05:22<br>                 Speed: 13.0 knots<br>                 Course: 160.7°<br>                 Lat: 48.5857<br>                 Lon: -123.2063                 </div>`)[0];
+                popup_9c13f31635851418faf79a1e3b3cc09d.setContent(html_46f9579ef3f4b7e5efcfe550210e9ea7);
+            
+        
+
+        circle_marker_1a467416d5899c90abb4dde579b4b8d4.bindPopup(popup_9c13f31635851418faf79a1e3b3cc09d)
+        ;
+
+        
+    
+    
+            var circle_marker_72b41bdd29e717f24573fcc3517e068e = L.circleMarker(
+                [48.585, -123.206],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_68b4455991fce23a8492230bb8a468ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9bd68478fe803c116c94c8501ec09f35 = $(`<div id="html_9bd68478fe803c116c94c8501ec09f35" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 20/126<br>                 Date: 2025-10-15 08:05:32<br>                 Speed: 13.0 knots<br>                 Course: 160.4°<br>                 Lat: 48.5850<br>                 Lon: -123.2060                 </div>`)[0];
+                popup_68b4455991fce23a8492230bb8a468ea.setContent(html_9bd68478fe803c116c94c8501ec09f35);
+            
+        
+
+        circle_marker_72b41bdd29e717f24573fcc3517e068e.bindPopup(popup_68b4455991fce23a8492230bb8a468ea)
+        ;
+
+        
+    
+    
+            var circle_marker_fee9d24f23a75aa25c32201ed46c1d87 = L.circleMarker(
+                [48.5845, -123.2057],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_90977ca7c256b759816562346d15a61f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61d7bbd2650e33c6b6b43b1e6497244e = $(`<div id="html_61d7bbd2650e33c6b6b43b1e6497244e" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 21/126<br>                 Date: 2025-10-15 08:05:42<br>                 Speed: 13.1 knots<br>                 Course: 161.0°<br>                 Lat: 48.5845<br>                 Lon: -123.2057                 </div>`)[0];
+                popup_90977ca7c256b759816562346d15a61f.setContent(html_61d7bbd2650e33c6b6b43b1e6497244e);
+            
+        
+
+        circle_marker_fee9d24f23a75aa25c32201ed46c1d87.bindPopup(popup_90977ca7c256b759816562346d15a61f)
+        ;
+
+        
+    
+    
+            var circle_marker_f161ba7f3473c7474c572793c3e8977c = L.circleMarker(
+                [48.5841, -123.2055],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8d6ca98dc4448c296b006ed10bc6db98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7078469d06c449d88ac3a15a298d7f34 = $(`<div id="html_7078469d06c449d88ac3a15a298d7f34" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 22/126<br>                 Date: 2025-10-15 08:05:51<br>                 Speed: 13.1 knots<br>                 Course: 161.3°<br>                 Lat: 48.5841<br>                 Lon: -123.2055                 </div>`)[0];
+                popup_8d6ca98dc4448c296b006ed10bc6db98.setContent(html_7078469d06c449d88ac3a15a298d7f34);
+            
+        
+
+        circle_marker_f161ba7f3473c7474c572793c3e8977c.bindPopup(popup_8d6ca98dc4448c296b006ed10bc6db98)
+        ;
+
+        
+    
+    
+            var circle_marker_e1645986fba3d1f8a12ec5a882ac6147 = L.circleMarker(
+                [48.5837, -123.2053],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_0b1aa562f3e14f5c3960b54a381ebb0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9d6f23d95018a024232250e2db99b74 = $(`<div id="html_d9d6f23d95018a024232250e2db99b74" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 23/126<br>                 Date: 2025-10-15 08:05:59<br>                 Speed: 13.1 knots<br>                 Course: 160.7°<br>                 Lat: 48.5837<br>                 Lon: -123.2053                 </div>`)[0];
+                popup_0b1aa562f3e14f5c3960b54a381ebb0d.setContent(html_d9d6f23d95018a024232250e2db99b74);
+            
+        
+
+        circle_marker_e1645986fba3d1f8a12ec5a882ac6147.bindPopup(popup_0b1aa562f3e14f5c3960b54a381ebb0d)
+        ;
+
+        
+    
+    
+            var circle_marker_a2e02e368840d26d5bcd366ff8d5a21c = L.circleMarker(
+                [48.5827, -123.2048],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8cd5ac921295a7b6e4f32f9e00e76354 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9f676c9ea84e6691084c16fe729d1091 = $(`<div id="html_9f676c9ea84e6691084c16fe729d1091" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 24/126<br>                 Date: 2025-10-15 08:06:12<br>                 Speed: 13.1 knots<br>                 Course: 159.7°<br>                 Lat: 48.5827<br>                 Lon: -123.2048                 </div>`)[0];
+                popup_8cd5ac921295a7b6e4f32f9e00e76354.setContent(html_9f676c9ea84e6691084c16fe729d1091);
+            
+        
+
+        circle_marker_a2e02e368840d26d5bcd366ff8d5a21c.bindPopup(popup_8cd5ac921295a7b6e4f32f9e00e76354)
+        ;
+
+        
+    
+    
+            var circle_marker_3c47c6d11be41e77a396e96835f9508c = L.circleMarker(
+                [48.5824, -123.2046],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_4b201ae35f33836a14128b31cf3f12e8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dddc7939d67ecf06f29582569d09f495 = $(`<div id="html_dddc7939d67ecf06f29582569d09f495" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 25/126<br>                 Date: 2025-10-15 08:06:19<br>                 Speed: 13.1 knots<br>                 Course: 158.8°<br>                 Lat: 48.5824<br>                 Lon: -123.2046                 </div>`)[0];
+                popup_4b201ae35f33836a14128b31cf3f12e8.setContent(html_dddc7939d67ecf06f29582569d09f495);
+            
+        
+
+        circle_marker_3c47c6d11be41e77a396e96835f9508c.bindPopup(popup_4b201ae35f33836a14128b31cf3f12e8)
+        ;
+
+        
+    
+    
+            var circle_marker_aceca6d0a2b386a746726450bb0d4d9d = L.circleMarker(
+                [48.582, -123.2044],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_bbca479307146360c71fb51e0c5ed716 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5367361d009bde41c3c90d9b67e8443c = $(`<div id="html_5367361d009bde41c3c90d9b67e8443c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 26/126<br>                 Date: 2025-10-15 08:06:25<br>                 Speed: 13.1 knots<br>                 Course: 157.4°<br>                 Lat: 48.5820<br>                 Lon: -123.2044                 </div>`)[0];
+                popup_bbca479307146360c71fb51e0c5ed716.setContent(html_5367361d009bde41c3c90d9b67e8443c);
+            
+        
+
+        circle_marker_aceca6d0a2b386a746726450bb0d4d9d.bindPopup(popup_bbca479307146360c71fb51e0c5ed716)
+        ;
+
+        
+    
+    
+            var circle_marker_373701326748b58d35399f3b7ab3cec5 = L.circleMarker(
+                [48.5818, -123.2042],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_51da834f5cb5d0fcb1fd89b63ef60ce0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f28731e0c35bbacd06641e6c4425ffe = $(`<div id="html_8f28731e0c35bbacd06641e6c4425ffe" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 27/126<br>                 Date: 2025-10-15 08:06:32<br>                 Speed: 13.0 knots<br>                 Course: 155.5°<br>                 Lat: 48.5818<br>                 Lon: -123.2042                 </div>`)[0];
+                popup_51da834f5cb5d0fcb1fd89b63ef60ce0.setContent(html_8f28731e0c35bbacd06641e6c4425ffe);
+            
+        
+
+        circle_marker_373701326748b58d35399f3b7ab3cec5.bindPopup(popup_51da834f5cb5d0fcb1fd89b63ef60ce0)
+        ;
+
+        
+    
+    
+            var circle_marker_a4bd0dfe926d5a1eee57e6054825946b = L.circleMarker(
+                [48.5812, -123.2038],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5c84dc583714e027de2d8df51f32545a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ec794831ae1fc93a4c85538813bb1b8 = $(`<div id="html_3ec794831ae1fc93a4c85538813bb1b8" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 28/126<br>                 Date: 2025-10-15 08:06:39<br>                 Speed: 13.0 knots<br>                 Course: 153.8°<br>                 Lat: 48.5812<br>                 Lon: -123.2038                 </div>`)[0];
+                popup_5c84dc583714e027de2d8df51f32545a.setContent(html_3ec794831ae1fc93a4c85538813bb1b8);
+            
+        
+
+        circle_marker_a4bd0dfe926d5a1eee57e6054825946b.bindPopup(popup_5c84dc583714e027de2d8df51f32545a)
+        ;
+
+        
+    
+    
+            var circle_marker_2af0cad63dc1ba8bfb5802c59de0f06c = L.circleMarker(
+                [48.581, -123.2036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_b6c5bf5f5c76d2095563ccc3879d274a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6d029ed5d06f1479d629f847b1ebada = $(`<div id="html_b6d029ed5d06f1479d629f847b1ebada" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 29/126<br>                 Date: 2025-10-15 08:06:45<br>                 Speed: 13.0 knots<br>                 Course: 153.9°<br>                 Lat: 48.5810<br>                 Lon: -123.2036                 </div>`)[0];
+                popup_b6c5bf5f5c76d2095563ccc3879d274a.setContent(html_b6d029ed5d06f1479d629f847b1ebada);
+            
+        
+
+        circle_marker_2af0cad63dc1ba8bfb5802c59de0f06c.bindPopup(popup_b6c5bf5f5c76d2095563ccc3879d274a)
+        ;
+
+        
+    
+    
+            var circle_marker_6dc580b10f9c6654d8df0e3bbc0e0bc7 = L.circleMarker(
+                [48.5804, -123.2032],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8919773f8e764fc89d54d2a8105b58bc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8cc195aaaaa0307ad39195f7bf996a19 = $(`<div id="html_8cc195aaaaa0307ad39195f7bf996a19" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 30/126<br>                 Date: 2025-10-15 08:06:55<br>                 Speed: 13.0 knots<br>                 Course: 153.1°<br>                 Lat: 48.5804<br>                 Lon: -123.2032                 </div>`)[0];
+                popup_8919773f8e764fc89d54d2a8105b58bc.setContent(html_8cc195aaaaa0307ad39195f7bf996a19);
+            
+        
+
+        circle_marker_6dc580b10f9c6654d8df0e3bbc0e0bc7.bindPopup(popup_8919773f8e764fc89d54d2a8105b58bc)
+        ;
+
+        
+    
+    
+            var circle_marker_50ae2f747b471c26d01b2f074ec94659 = L.circleMarker(
+                [48.5801, -123.2029],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_cea97c7c1897b4e859596f15b4cf3a3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_72ac56da314aaae498adadaecaa8d0e5 = $(`<div id="html_72ac56da314aaae498adadaecaa8d0e5" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 31/126<br>                 Date: 2025-10-15 08:07:02<br>                 Speed: 13.0 knots<br>                 Course: 153.3°<br>                 Lat: 48.5801<br>                 Lon: -123.2029                 </div>`)[0];
+                popup_cea97c7c1897b4e859596f15b4cf3a3e.setContent(html_72ac56da314aaae498adadaecaa8d0e5);
+            
+        
+
+        circle_marker_50ae2f747b471c26d01b2f074ec94659.bindPopup(popup_cea97c7c1897b4e859596f15b4cf3a3e)
+        ;
+
+        
+    
+    
+            var circle_marker_e09761b8a9f4a706797b62c7a11f8033 = L.circleMarker(
+                [48.5795, -123.2025],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_04932acf6bbf462e55b9244ac763dd42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96bb0a26cfe2afe6afeea084cc7cedad = $(`<div id="html_96bb0a26cfe2afe6afeea084cc7cedad" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 32/126<br>                 Date: 2025-10-15 08:07:12<br>                 Speed: 13.1 knots<br>                 Course: 153.1°<br>                 Lat: 48.5795<br>                 Lon: -123.2025                 </div>`)[0];
+                popup_04932acf6bbf462e55b9244ac763dd42.setContent(html_96bb0a26cfe2afe6afeea084cc7cedad);
+            
+        
+
+        circle_marker_e09761b8a9f4a706797b62c7a11f8033.bindPopup(popup_04932acf6bbf462e55b9244ac763dd42)
+        ;
+
+        
+    
+    
+            var circle_marker_5be872679728c4a70b4ba8b20cd54f5c = L.circleMarker(
+                [48.5786, -123.2018],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_80b67c26cf9df9ab1e99962bfbc06804 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_947ad5c0169eb2e15dc4d7b8364aa52c = $(`<div id="html_947ad5c0169eb2e15dc4d7b8364aa52c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 33/126<br>                 Date: 2025-10-15 08:07:22<br>                 Speed: 13.1 knots<br>                 Course: 153.2°<br>                 Lat: 48.5786<br>                 Lon: -123.2018                 </div>`)[0];
+                popup_80b67c26cf9df9ab1e99962bfbc06804.setContent(html_947ad5c0169eb2e15dc4d7b8364aa52c);
+            
+        
+
+        circle_marker_5be872679728c4a70b4ba8b20cd54f5c.bindPopup(popup_80b67c26cf9df9ab1e99962bfbc06804)
+        ;
+
+        
+    
+    
+            var circle_marker_95e66d01794a95934de269c60c8c6c3e = L.circleMarker(
+                [48.5781, -123.2014],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_66469e13cf06d3c67e49ea9d4f22065f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d496e4554353188046064d16c98c3214 = $(`<div id="html_d496e4554353188046064d16c98c3214" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 34/126<br>                 Date: 2025-10-15 08:07:32<br>                 Speed: 13.1 knots<br>                 Course: 153.7°<br>                 Lat: 48.5781<br>                 Lon: -123.2014                 </div>`)[0];
+                popup_66469e13cf06d3c67e49ea9d4f22065f.setContent(html_d496e4554353188046064d16c98c3214);
+            
+        
+
+        circle_marker_95e66d01794a95934de269c60c8c6c3e.bindPopup(popup_66469e13cf06d3c67e49ea9d4f22065f)
+        ;
+
+        
+    
+    
+            var circle_marker_58542746618a26475eb8d2c12b64c0a3 = L.circleMarker(
+                [48.5775, -123.201],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5ce3c40395667a8749104a7d40cfbbbd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85cf2bd940ea328037a70f6d5c8681b7 = $(`<div id="html_85cf2bd940ea328037a70f6d5c8681b7" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 35/126<br>                 Date: 2025-10-15 08:07:42<br>                 Speed: 13.2 knots<br>                 Course: 154.7°<br>                 Lat: 48.5775<br>                 Lon: -123.2010                 </div>`)[0];
+                popup_5ce3c40395667a8749104a7d40cfbbbd.setContent(html_85cf2bd940ea328037a70f6d5c8681b7);
+            
+        
+
+        circle_marker_58542746618a26475eb8d2c12b64c0a3.bindPopup(popup_5ce3c40395667a8749104a7d40cfbbbd)
+        ;
+
+        
+    
+    
+            var circle_marker_29d8578052faa26bbee52d3cb7c315d7 = L.circleMarker(
+                [48.5774, -123.2009],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_d02b82b1a3e7bbedbd2e96daf39c2b88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e3975605ec77bddc6aa72e2702f241a2 = $(`<div id="html_e3975605ec77bddc6aa72e2702f241a2" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 36/126<br>                 Date: 2025-10-15 08:07:51<br>                 Speed: 13.1 knots<br>                 Course: 154.9°<br>                 Lat: 48.5774<br>                 Lon: -123.2009                 </div>`)[0];
+                popup_d02b82b1a3e7bbedbd2e96daf39c2b88.setContent(html_e3975605ec77bddc6aa72e2702f241a2);
+            
+        
+
+        circle_marker_29d8578052faa26bbee52d3cb7c315d7.bindPopup(popup_d02b82b1a3e7bbedbd2e96daf39c2b88)
+        ;
+
+        
+    
+    
+            var circle_marker_8572ca0c6869b40875a7a349725db365 = L.circleMarker(
+                [48.5767, -123.2004],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8aa7df284abb70e8e581aeb169b2a371 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e413c5c43f1e762aeb5730a3a5ae11d4 = $(`<div id="html_e413c5c43f1e762aeb5730a3a5ae11d4" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 37/126<br>                 Date: 2025-10-15 08:08:02<br>                 Speed: 13.1 knots<br>                 Course: 155.1°<br>                 Lat: 48.5767<br>                 Lon: -123.2004                 </div>`)[0];
+                popup_8aa7df284abb70e8e581aeb169b2a371.setContent(html_e413c5c43f1e762aeb5730a3a5ae11d4);
+            
+        
+
+        circle_marker_8572ca0c6869b40875a7a349725db365.bindPopup(popup_8aa7df284abb70e8e581aeb169b2a371)
+        ;
+
+        
+    
+    
+            var circle_marker_5921107eebe152458db5f8fb5fb01e0a = L.circleMarker(
+                [48.5762, -123.2001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_b397cc316bb2108548658d0a8a60a5d9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_92fa6998ceb28689eac7d169e1c7ab6e = $(`<div id="html_92fa6998ceb28689eac7d169e1c7ab6e" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 38/126<br>                 Date: 2025-10-15 08:08:12<br>                 Speed: 13.1 knots<br>                 Course: 155.7°<br>                 Lat: 48.5762<br>                 Lon: -123.2001                 </div>`)[0];
+                popup_b397cc316bb2108548658d0a8a60a5d9.setContent(html_92fa6998ceb28689eac7d169e1c7ab6e);
+            
+        
+
+        circle_marker_5921107eebe152458db5f8fb5fb01e0a.bindPopup(popup_b397cc316bb2108548658d0a8a60a5d9)
+        ;
+
+        
+    
+    
+            var circle_marker_f6dab07b815ff0fd2e83f8716490cab4 = L.circleMarker(
+                [48.5757, -123.1997],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_ead484e6836b7bbc91a74fc5acab5373 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3bb92c29d0e8d6c3acb282db338f6ebc = $(`<div id="html_3bb92c29d0e8d6c3acb282db338f6ebc" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 39/126<br>                 Date: 2025-10-15 08:08:22<br>                 Speed: 13.2 knots<br>                 Course: 156.3°<br>                 Lat: 48.5757<br>                 Lon: -123.1997                 </div>`)[0];
+                popup_ead484e6836b7bbc91a74fc5acab5373.setContent(html_3bb92c29d0e8d6c3acb282db338f6ebc);
+            
+        
+
+        circle_marker_f6dab07b815ff0fd2e83f8716490cab4.bindPopup(popup_ead484e6836b7bbc91a74fc5acab5373)
+        ;
+
+        
+    
+    
+            var circle_marker_adca1d7d21cfddaa3a78c048d0d71f34 = L.circleMarker(
+                [48.5752, -123.1995],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_4f346a3e7775b0f0fb0664ba83c53a5d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_96cca37fdcabbfff186f3b2e575be995 = $(`<div id="html_96cca37fdcabbfff186f3b2e575be995" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 40/126<br>                 Date: 2025-10-15 08:08:30<br>                 Speed: 13.1 knots<br>                 Course: 156.2°<br>                 Lat: 48.5752<br>                 Lon: -123.1995                 </div>`)[0];
+                popup_4f346a3e7775b0f0fb0664ba83c53a5d.setContent(html_96cca37fdcabbfff186f3b2e575be995);
+            
+        
+
+        circle_marker_adca1d7d21cfddaa3a78c048d0d71f34.bindPopup(popup_4f346a3e7775b0f0fb0664ba83c53a5d)
+        ;
+
+        
+    
+    
+            var circle_marker_ab8a42421a02a9d2efed9c6d69e77a90 = L.circleMarker(
+                [48.5745, -123.199],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_1b7377cfb9faf13f0e0f01217918a4a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_12295a45b97b07c491d39e29d2746085 = $(`<div id="html_12295a45b97b07c491d39e29d2746085" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 41/126<br>                 Date: 2025-10-15 08:08:42<br>                 Speed: 13.1 knots<br>                 Course: 155.5°<br>                 Lat: 48.5745<br>                 Lon: -123.1990                 </div>`)[0];
+                popup_1b7377cfb9faf13f0e0f01217918a4a1.setContent(html_12295a45b97b07c491d39e29d2746085);
+            
+        
+
+        circle_marker_ab8a42421a02a9d2efed9c6d69e77a90.bindPopup(popup_1b7377cfb9faf13f0e0f01217918a4a1)
+        ;
+
+        
+    
+    
+            var circle_marker_31972313a48ccbe7d54ac07bbe370d0c = L.circleMarker(
+                [48.5739, -123.1986],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_aec26ca40040250a566ca1f58c3225a5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff8b6dd33c0e1c47fceead68f6ba1752 = $(`<div id="html_ff8b6dd33c0e1c47fceead68f6ba1752" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 42/126<br>                 Date: 2025-10-15 08:08:51<br>                 Speed: 13.1 knots<br>                 Course: 155.5°<br>                 Lat: 48.5739<br>                 Lon: -123.1986                 </div>`)[0];
+                popup_aec26ca40040250a566ca1f58c3225a5.setContent(html_ff8b6dd33c0e1c47fceead68f6ba1752);
+            
+        
+
+        circle_marker_31972313a48ccbe7d54ac07bbe370d0c.bindPopup(popup_aec26ca40040250a566ca1f58c3225a5)
+        ;
+
+        
+    
+    
+            var circle_marker_1d91e9fe9f036c939d75ddf617d5f2a6 = L.circleMarker(
+                [48.5735, -123.1983],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_0e3b2e9f88a12fde8641ccde40f7f564 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00063a487655fae633979e29e0a1c71d = $(`<div id="html_00063a487655fae633979e29e0a1c71d" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 43/126<br>                 Date: 2025-10-15 08:09:02<br>                 Speed: 13.1 knots<br>                 Course: 155.9°<br>                 Lat: 48.5735<br>                 Lon: -123.1983                 </div>`)[0];
+                popup_0e3b2e9f88a12fde8641ccde40f7f564.setContent(html_00063a487655fae633979e29e0a1c71d);
+            
+        
+
+        circle_marker_1d91e9fe9f036c939d75ddf617d5f2a6.bindPopup(popup_0e3b2e9f88a12fde8641ccde40f7f564)
+        ;
+
+        
+    
+    
+            var circle_marker_c78d9f629ec5e0c65771130c0a934f11 = L.circleMarker(
+                [48.5729, -123.1979],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_f4c0a39b596dd041af6c8b605ad27498 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6aa753155c6cfce5637324889eda5a5d = $(`<div id="html_6aa753155c6cfce5637324889eda5a5d" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 44/126<br>                 Date: 2025-10-15 08:09:12<br>                 Speed: 13.2 knots<br>                 Course: 155.9°<br>                 Lat: 48.5729<br>                 Lon: -123.1979                 </div>`)[0];
+                popup_f4c0a39b596dd041af6c8b605ad27498.setContent(html_6aa753155c6cfce5637324889eda5a5d);
+            
+        
+
+        circle_marker_c78d9f629ec5e0c65771130c0a934f11.bindPopup(popup_f4c0a39b596dd041af6c8b605ad27498)
+        ;
+
+        
+    
+    
+            var circle_marker_c3a333fc3a40cf418b4fafd38243927b = L.circleMarker(
+                [48.5723, -123.1975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_2b1338cb6799ef58f425cf000db18831 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9aae138ac8f29e34f38026b76c08cdde = $(`<div id="html_9aae138ac8f29e34f38026b76c08cdde" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 45/126<br>                 Date: 2025-10-15 08:09:22<br>                 Speed: 13.2 knots<br>                 Course: 155.4°<br>                 Lat: 48.5723<br>                 Lon: -123.1975                 </div>`)[0];
+                popup_2b1338cb6799ef58f425cf000db18831.setContent(html_9aae138ac8f29e34f38026b76c08cdde);
+            
+        
+
+        circle_marker_c3a333fc3a40cf418b4fafd38243927b.bindPopup(popup_2b1338cb6799ef58f425cf000db18831)
+        ;
+
+        
+    
+    
+            var circle_marker_3982b925d1767d9b0bb6a720468ced2a = L.circleMarker(
+                [48.5718, -123.1971],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_e57b36a56782b2f8d66beb9c2814d20d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ce1335309a679eaa73e06af201a7e87 = $(`<div id="html_4ce1335309a679eaa73e06af201a7e87" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 46/126<br>                 Date: 2025-10-15 08:09:31<br>                 Speed: 13.2 knots<br>                 Course: 155.3°<br>                 Lat: 48.5718<br>                 Lon: -123.1971                 </div>`)[0];
+                popup_e57b36a56782b2f8d66beb9c2814d20d.setContent(html_4ce1335309a679eaa73e06af201a7e87);
+            
+        
+
+        circle_marker_3982b925d1767d9b0bb6a720468ced2a.bindPopup(popup_e57b36a56782b2f8d66beb9c2814d20d)
+        ;
+
+        
+    
+    
+            var circle_marker_81e99faa7937856dda6e80df77bbba93 = L.circleMarker(
+                [48.5712, -123.1967],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a7a60de7ed83d364e6d9a2cf9670c9a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_98d6c32e52702d2b5cbf681299570f18 = $(`<div id="html_98d6c32e52702d2b5cbf681299570f18" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 47/126<br>                 Date: 2025-10-15 08:09:42<br>                 Speed: 13.2 knots<br>                 Course: 155.2°<br>                 Lat: 48.5712<br>                 Lon: -123.1967                 </div>`)[0];
+                popup_a7a60de7ed83d364e6d9a2cf9670c9a4.setContent(html_98d6c32e52702d2b5cbf681299570f18);
+            
+        
+
+        circle_marker_81e99faa7937856dda6e80df77bbba93.bindPopup(popup_a7a60de7ed83d364e6d9a2cf9670c9a4)
+        ;
+
+        
+    
+    
+            var circle_marker_ae732882130a460012897b82e496200b = L.circleMarker(
+                [48.5707, -123.1964],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5dea74471f472d74cc3d528949303699 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_32c2a0f8c6684ecb70841eda9497cc02 = $(`<div id="html_32c2a0f8c6684ecb70841eda9497cc02" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 48/126<br>                 Date: 2025-10-15 08:09:51<br>                 Speed: 13.2 knots<br>                 Course: 155.1°<br>                 Lat: 48.5707<br>                 Lon: -123.1964                 </div>`)[0];
+                popup_5dea74471f472d74cc3d528949303699.setContent(html_32c2a0f8c6684ecb70841eda9497cc02);
+            
+        
+
+        circle_marker_ae732882130a460012897b82e496200b.bindPopup(popup_5dea74471f472d74cc3d528949303699)
+        ;
+
+        
+    
+    
+            var circle_marker_887f799f5ac80676382fffa6f74b4e78 = L.circleMarker(
+                [48.5701, -123.196],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_680de06bf4f7c3dbc583b60d70586dde = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_acd5564fb3715f9f5fdf230f96e75910 = $(`<div id="html_acd5564fb3715f9f5fdf230f96e75910" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 49/126<br>                 Date: 2025-10-15 08:10:02<br>                 Speed: 13.2 knots<br>                 Course: 155.2°<br>                 Lat: 48.5701<br>                 Lon: -123.1960                 </div>`)[0];
+                popup_680de06bf4f7c3dbc583b60d70586dde.setContent(html_acd5564fb3715f9f5fdf230f96e75910);
+            
+        
+
+        circle_marker_887f799f5ac80676382fffa6f74b4e78.bindPopup(popup_680de06bf4f7c3dbc583b60d70586dde)
+        ;
+
+        
+    
+    
+            var circle_marker_3092429e2c680ef96fa056effc34cceb = L.circleMarker(
+                [48.5695, -123.1955],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_ba6d2faa0be9826647b75875cd5c78cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6771def32afc4f5b5705535cac37d854 = $(`<div id="html_6771def32afc4f5b5705535cac37d854" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 50/126<br>                 Date: 2025-10-15 08:10:12<br>                 Speed: 13.2 knots<br>                 Course: 155.1°<br>                 Lat: 48.5695<br>                 Lon: -123.1955                 </div>`)[0];
+                popup_ba6d2faa0be9826647b75875cd5c78cc.setContent(html_6771def32afc4f5b5705535cac37d854);
+            
+        
+
+        circle_marker_3092429e2c680ef96fa056effc34cceb.bindPopup(popup_ba6d2faa0be9826647b75875cd5c78cc)
+        ;
+
+        
+    
+    
+            var circle_marker_92ff9be0489cc857f301a1007f543176 = L.circleMarker(
+                [48.569, -123.1952],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_7e75b27bb99b4c2fa0d2f0467e540436 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6d93acd02466789c350f7f3e2dcc8292 = $(`<div id="html_6d93acd02466789c350f7f3e2dcc8292" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 51/126<br>                 Date: 2025-10-15 08:10:22<br>                 Speed: 13.2 knots<br>                 Course: 155.1°<br>                 Lat: 48.5690<br>                 Lon: -123.1952                 </div>`)[0];
+                popup_7e75b27bb99b4c2fa0d2f0467e540436.setContent(html_6d93acd02466789c350f7f3e2dcc8292);
+            
+        
+
+        circle_marker_92ff9be0489cc857f301a1007f543176.bindPopup(popup_7e75b27bb99b4c2fa0d2f0467e540436)
+        ;
+
+        
+    
+    
+            var circle_marker_b31f55e8383c12b2b59f0edf7b6a5a83 = L.circleMarker(
+                [48.5685, -123.1948],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a1ed5d5114b300666a1c0b6ba7743688 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8c11290f4207312ab2bda8a4e997d21 = $(`<div id="html_e8c11290f4207312ab2bda8a4e997d21" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 52/126<br>                 Date: 2025-10-15 08:10:31<br>                 Speed: 13.2 knots<br>                 Course: 155.6°<br>                 Lat: 48.5685<br>                 Lon: -123.1948                 </div>`)[0];
+                popup_a1ed5d5114b300666a1c0b6ba7743688.setContent(html_e8c11290f4207312ab2bda8a4e997d21);
+            
+        
+
+        circle_marker_b31f55e8383c12b2b59f0edf7b6a5a83.bindPopup(popup_a1ed5d5114b300666a1c0b6ba7743688)
+        ;
+
+        
+    
+    
+            var circle_marker_3b1a1a1eef063c1d536446174b1cdca8 = L.circleMarker(
+                [48.5678, -123.1943],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_40a67425dbbebad7d8bd155d9a4b5b0d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b317438ce15447889862ac2b7982bddc = $(`<div id="html_b317438ce15447889862ac2b7982bddc" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 53/126<br>                 Date: 2025-10-15 08:10:42<br>                 Speed: 13.2 knots<br>                 Course: 156.1°<br>                 Lat: 48.5678<br>                 Lon: -123.1943                 </div>`)[0];
+                popup_40a67425dbbebad7d8bd155d9a4b5b0d.setContent(html_b317438ce15447889862ac2b7982bddc);
+            
+        
+
+        circle_marker_3b1a1a1eef063c1d536446174b1cdca8.bindPopup(popup_40a67425dbbebad7d8bd155d9a4b5b0d)
+        ;
+
+        
+    
+    
+            var circle_marker_94a37c34476c84a8c45bec94b8234d1c = L.circleMarker(
+                [48.5674, -123.1941],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_6661804d426d4f41c15648676425aaf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7616211e1bc1530904f8e4edea58d45 = $(`<div id="html_d7616211e1bc1530904f8e4edea58d45" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 54/126<br>                 Date: 2025-10-15 08:10:51<br>                 Speed: 13.2 knots<br>                 Course: 155.8°<br>                 Lat: 48.5674<br>                 Lon: -123.1941                 </div>`)[0];
+                popup_6661804d426d4f41c15648676425aaf6.setContent(html_d7616211e1bc1530904f8e4edea58d45);
+            
+        
+
+        circle_marker_94a37c34476c84a8c45bec94b8234d1c.bindPopup(popup_6661804d426d4f41c15648676425aaf6)
+        ;
+
+        
+    
+    
+            var circle_marker_09359af6fe2c323d2b42fdb44902b3ee = L.circleMarker(
+                [48.5667, -123.1936],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_b383a2f7b404a1adc4280743f6feca8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6beb9afebb0fbbe0cfa65fc95549d3e9 = $(`<div id="html_6beb9afebb0fbbe0cfa65fc95549d3e9" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 55/126<br>                 Date: 2025-10-15 08:11:02<br>                 Speed: 13.2 knots<br>                 Course: 155.0°<br>                 Lat: 48.5667<br>                 Lon: -123.1936                 </div>`)[0];
+                popup_b383a2f7b404a1adc4280743f6feca8f.setContent(html_6beb9afebb0fbbe0cfa65fc95549d3e9);
+            
+        
+
+        circle_marker_09359af6fe2c323d2b42fdb44902b3ee.bindPopup(popup_b383a2f7b404a1adc4280743f6feca8f)
+        ;
+
+        
+    
+    
+            var circle_marker_579e517d1961e732c812996827b5b084 = L.circleMarker(
+                [48.5662, -123.1933],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_b737a946ca777c9b6faade518fbdf86c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f72927d751e47c8e01b3473133ac3de = $(`<div id="html_5f72927d751e47c8e01b3473133ac3de" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 56/126<br>                 Date: 2025-10-15 08:11:12<br>                 Speed: 13.2 knots<br>                 Course: 154.8°<br>                 Lat: 48.5662<br>                 Lon: -123.1933                 </div>`)[0];
+                popup_b737a946ca777c9b6faade518fbdf86c.setContent(html_5f72927d751e47c8e01b3473133ac3de);
+            
+        
+
+        circle_marker_579e517d1961e732c812996827b5b084.bindPopup(popup_b737a946ca777c9b6faade518fbdf86c)
+        ;
+
+        
+    
+    
+            var circle_marker_2383d5993d42c233ff784315411f4e35 = L.circleMarker(
+                [48.5656, -123.1928],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_6a2ee9d4c45137ee8da7b0fbf617b67b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9cc33d3965a9ba0f33dc1dce58345f5c = $(`<div id="html_9cc33d3965a9ba0f33dc1dce58345f5c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 57/126<br>                 Date: 2025-10-15 08:11:22<br>                 Speed: 13.2 knots<br>                 Course: 153.8°<br>                 Lat: 48.5656<br>                 Lon: -123.1928                 </div>`)[0];
+                popup_6a2ee9d4c45137ee8da7b0fbf617b67b.setContent(html_9cc33d3965a9ba0f33dc1dce58345f5c);
+            
+        
+
+        circle_marker_2383d5993d42c233ff784315411f4e35.bindPopup(popup_6a2ee9d4c45137ee8da7b0fbf617b67b)
+        ;
+
+        
+    
+    
+            var circle_marker_b696e956e822cdc058cef6949201535f = L.circleMarker(
+                [48.5651, -123.1925],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_50da4c70857eafb66caa731dba16c323 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_437c368aa7e082703168615bf076a418 = $(`<div id="html_437c368aa7e082703168615bf076a418" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 58/126<br>                 Date: 2025-10-15 08:11:31<br>                 Speed: 13.1 knots<br>                 Course: 154.1°<br>                 Lat: 48.5651<br>                 Lon: -123.1925                 </div>`)[0];
+                popup_50da4c70857eafb66caa731dba16c323.setContent(html_437c368aa7e082703168615bf076a418);
+            
+        
+
+        circle_marker_b696e956e822cdc058cef6949201535f.bindPopup(popup_50da4c70857eafb66caa731dba16c323)
+        ;
+
+        
+    
+    
+            var circle_marker_9fa75d0c250fc599076abc3390b63415 = L.circleMarker(
+                [48.5644, -123.1919],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a437fee9d11bbfdb8a9fb5223dfba895 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_178e6ae81d963407043baa050dcbfea0 = $(`<div id="html_178e6ae81d963407043baa050dcbfea0" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 59/126<br>                 Date: 2025-10-15 08:11:42<br>                 Speed: 13.1 knots<br>                 Course: 154.3°<br>                 Lat: 48.5644<br>                 Lon: -123.1919                 </div>`)[0];
+                popup_a437fee9d11bbfdb8a9fb5223dfba895.setContent(html_178e6ae81d963407043baa050dcbfea0);
+            
+        
+
+        circle_marker_9fa75d0c250fc599076abc3390b63415.bindPopup(popup_a437fee9d11bbfdb8a9fb5223dfba895)
+        ;
+
+        
+    
+    
+            var circle_marker_6c2c5271523d9b0dafbf843c7c23c5c0 = L.circleMarker(
+                [48.5639, -123.1916],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_cd997b5296ce5c5cb53325e40ac524b1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ead1c2d6b7874271d799c622b1b73664 = $(`<div id="html_ead1c2d6b7874271d799c622b1b73664" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 60/126<br>                 Date: 2025-10-15 08:11:51<br>                 Speed: 13.2 knots<br>                 Course: 154.7°<br>                 Lat: 48.5639<br>                 Lon: -123.1916                 </div>`)[0];
+                popup_cd997b5296ce5c5cb53325e40ac524b1.setContent(html_ead1c2d6b7874271d799c622b1b73664);
+            
+        
+
+        circle_marker_6c2c5271523d9b0dafbf843c7c23c5c0.bindPopup(popup_cd997b5296ce5c5cb53325e40ac524b1)
+        ;
+
+        
+    
+    
+            var circle_marker_ed825a501e32c4e7ae15ac3b3e9b4818 = L.circleMarker(
+                [48.5634, -123.1912],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_97668c39c4fb4bcde9548803e61eb5ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7be5dc8beb81659c345e174909b45e3 = $(`<div id="html_a7be5dc8beb81659c345e174909b45e3" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 61/126<br>                 Date: 2025-10-15 08:12:02<br>                 Speed: 13.2 knots<br>                 Course: 154.9°<br>                 Lat: 48.5634<br>                 Lon: -123.1912                 </div>`)[0];
+                popup_97668c39c4fb4bcde9548803e61eb5ac.setContent(html_a7be5dc8beb81659c345e174909b45e3);
+            
+        
+
+        circle_marker_ed825a501e32c4e7ae15ac3b3e9b4818.bindPopup(popup_97668c39c4fb4bcde9548803e61eb5ac)
+        ;
+
+        
+    
+    
+            var circle_marker_068b48d807aa065f927c467a14952d37 = L.circleMarker(
+                [48.5628, -123.1908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_83fbffb573214a738a141aa2569f75ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21b714178da3f7c1dbd8cdb7091c7f36 = $(`<div id="html_21b714178da3f7c1dbd8cdb7091c7f36" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 62/126<br>                 Date: 2025-10-15 08:12:12<br>                 Speed: 13.1 knots<br>                 Course: 154.8°<br>                 Lat: 48.5628<br>                 Lon: -123.1908                 </div>`)[0];
+                popup_83fbffb573214a738a141aa2569f75ae.setContent(html_21b714178da3f7c1dbd8cdb7091c7f36);
+            
+        
+
+        circle_marker_068b48d807aa065f927c467a14952d37.bindPopup(popup_83fbffb573214a738a141aa2569f75ae)
+        ;
+
+        
+    
+    
+            var circle_marker_a1f4e0ab27bb5089a77cb1a828eeb754 = L.circleMarker(
+                [48.5623, -123.1904],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_33c6a8d9808c57cca868d707cb54ff10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3148fdf5ecf3e88ac20120ab32c71d4b = $(`<div id="html_3148fdf5ecf3e88ac20120ab32c71d4b" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 63/126<br>                 Date: 2025-10-15 08:12:22<br>                 Speed: 13.2 knots<br>                 Course: 154.4°<br>                 Lat: 48.5623<br>                 Lon: -123.1904                 </div>`)[0];
+                popup_33c6a8d9808c57cca868d707cb54ff10.setContent(html_3148fdf5ecf3e88ac20120ab32c71d4b);
+            
+        
+
+        circle_marker_a1f4e0ab27bb5089a77cb1a828eeb754.bindPopup(popup_33c6a8d9808c57cca868d707cb54ff10)
+        ;
+
+        
+    
+    
+            var circle_marker_92633912f6b172e9e0c679d57c41d5db = L.circleMarker(
+                [48.5618, -123.1901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8e4f9e09bf92e489c1e1ab32a1546b93 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_84281f7d8b82ad18b2b484378311a817 = $(`<div id="html_84281f7d8b82ad18b2b484378311a817" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 64/126<br>                 Date: 2025-10-15 08:12:31<br>                 Speed: 13.1 knots<br>                 Course: 154.2°<br>                 Lat: 48.5618<br>                 Lon: -123.1901                 </div>`)[0];
+                popup_8e4f9e09bf92e489c1e1ab32a1546b93.setContent(html_84281f7d8b82ad18b2b484378311a817);
+            
+        
+
+        circle_marker_92633912f6b172e9e0c679d57c41d5db.bindPopup(popup_8e4f9e09bf92e489c1e1ab32a1546b93)
+        ;
+
+        
+    
+    
+            var circle_marker_1db82a586ebdae849c001ff97a517c34 = L.circleMarker(
+                [48.5611, -123.1896],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_dbf219cd78fbbffad907a61128a6161c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_607bdfa1d1c0ed961961fd7394e29f7f = $(`<div id="html_607bdfa1d1c0ed961961fd7394e29f7f" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 65/126<br>                 Date: 2025-10-15 08:12:42<br>                 Speed: 13.1 knots<br>                 Course: 154.0°<br>                 Lat: 48.5611<br>                 Lon: -123.1896                 </div>`)[0];
+                popup_dbf219cd78fbbffad907a61128a6161c.setContent(html_607bdfa1d1c0ed961961fd7394e29f7f);
+            
+        
+
+        circle_marker_1db82a586ebdae849c001ff97a517c34.bindPopup(popup_dbf219cd78fbbffad907a61128a6161c)
+        ;
+
+        
+    
+    
+            var circle_marker_e6df93530d17e68910da09950c86fe64 = L.circleMarker(
+                [48.5607, -123.1893],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_f7a3d4f705dd924d9d3cdb7be8399097 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb9d982b705f936caedd01afeb167b85 = $(`<div id="html_eb9d982b705f936caedd01afeb167b85" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 66/126<br>                 Date: 2025-10-15 08:12:51<br>                 Speed: 13.2 knots<br>                 Course: 154.1°<br>                 Lat: 48.5607<br>                 Lon: -123.1893                 </div>`)[0];
+                popup_f7a3d4f705dd924d9d3cdb7be8399097.setContent(html_eb9d982b705f936caedd01afeb167b85);
+            
+        
+
+        circle_marker_e6df93530d17e68910da09950c86fe64.bindPopup(popup_f7a3d4f705dd924d9d3cdb7be8399097)
+        ;
+
+        
+    
+    
+            var circle_marker_cf758654221bc92b20ba4f5bc75b2035 = L.circleMarker(
+                [48.5601, -123.1889],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_3b53e0188f01bd3f9901cf688c4ca37f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3f20f3b76f3ba1a0723779d57f095e3a = $(`<div id="html_3f20f3b76f3ba1a0723779d57f095e3a" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 67/126<br>                 Date: 2025-10-15 08:13:02<br>                 Speed: 13.1 knots<br>                 Course: 153.7°<br>                 Lat: 48.5601<br>                 Lon: -123.1889                 </div>`)[0];
+                popup_3b53e0188f01bd3f9901cf688c4ca37f.setContent(html_3f20f3b76f3ba1a0723779d57f095e3a);
+            
+        
+
+        circle_marker_cf758654221bc92b20ba4f5bc75b2035.bindPopup(popup_3b53e0188f01bd3f9901cf688c4ca37f)
+        ;
+
+        
+    
+    
+            var circle_marker_503c52f0864d8aab9d7f872a98b0d2c5 = L.circleMarker(
+                [48.5595, -123.1884],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_1d23962aff5ead745fd4b35426b983cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_23e809a13036b921415fb084e0537c60 = $(`<div id="html_23e809a13036b921415fb084e0537c60" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 68/126<br>                 Date: 2025-10-15 08:13:12<br>                 Speed: 13.1 knots<br>                 Course: 153.7°<br>                 Lat: 48.5595<br>                 Lon: -123.1884                 </div>`)[0];
+                popup_1d23962aff5ead745fd4b35426b983cc.setContent(html_23e809a13036b921415fb084e0537c60);
+            
+        
+
+        circle_marker_503c52f0864d8aab9d7f872a98b0d2c5.bindPopup(popup_1d23962aff5ead745fd4b35426b983cc)
+        ;
+
+        
+    
+    
+            var circle_marker_9da731b5476bee21d175857b83d41e2c = L.circleMarker(
+                [48.559, -123.188],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_c383c3bd104537ea91c9a032154c9401 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b6b4521208ad881731af6235c40aaf4 = $(`<div id="html_2b6b4521208ad881731af6235c40aaf4" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 69/126<br>                 Date: 2025-10-15 08:13:22<br>                 Speed: 13.0 knots<br>                 Course: 153.6°<br>                 Lat: 48.5590<br>                 Lon: -123.1880                 </div>`)[0];
+                popup_c383c3bd104537ea91c9a032154c9401.setContent(html_2b6b4521208ad881731af6235c40aaf4);
+            
+        
+
+        circle_marker_9da731b5476bee21d175857b83d41e2c.bindPopup(popup_c383c3bd104537ea91c9a032154c9401)
+        ;
+
+        
+    
+    
+            var circle_marker_95f7d3a29b6a86b31c676b75ba8deae1 = L.circleMarker(
+                [48.5585, -123.1877],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_b9a543f9bafd8a68c164e56ea3f9d185 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d1d9d46c134c6d4abfc1244677797705 = $(`<div id="html_d1d9d46c134c6d4abfc1244677797705" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 70/126<br>                 Date: 2025-10-15 08:13:31<br>                 Speed: 12.9 knots<br>                 Course: 153.2°<br>                 Lat: 48.5585<br>                 Lon: -123.1877                 </div>`)[0];
+                popup_b9a543f9bafd8a68c164e56ea3f9d185.setContent(html_d1d9d46c134c6d4abfc1244677797705);
+            
+        
+
+        circle_marker_95f7d3a29b6a86b31c676b75ba8deae1.bindPopup(popup_b9a543f9bafd8a68c164e56ea3f9d185)
+        ;
+
+        
+    
+    
+            var circle_marker_322b6c2a40ae2abe2190917c2e7b0b21 = L.circleMarker(
+                [48.558, -123.1872],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_87dc82949a5801ac97ce36e81f84b484 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ace8d3b0ce32334de03e321d2eed113f = $(`<div id="html_ace8d3b0ce32334de03e321d2eed113f" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 71/126<br>                 Date: 2025-10-15 08:13:42<br>                 Speed: 13.0 knots<br>                 Course: 152.3°<br>                 Lat: 48.5580<br>                 Lon: -123.1872                 </div>`)[0];
+                popup_87dc82949a5801ac97ce36e81f84b484.setContent(html_ace8d3b0ce32334de03e321d2eed113f);
+            
+        
+
+        circle_marker_322b6c2a40ae2abe2190917c2e7b0b21.bindPopup(popup_87dc82949a5801ac97ce36e81f84b484)
+        ;
+
+        
+    
+    
+            var circle_marker_30424d52b3bc9039ca962c0198d488c3 = L.circleMarker(
+                [48.557, -123.1865],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_fc4c1030cf09467d3456f514dd90c9bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_86e777065c8882f0ea5bd66af56edd62 = $(`<div id="html_86e777065c8882f0ea5bd66af56edd62" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 72/126<br>                 Date: 2025-10-15 08:14:02<br>                 Speed: 12.9 knots<br>                 Course: 153.0°<br>                 Lat: 48.5570<br>                 Lon: -123.1865                 </div>`)[0];
+                popup_fc4c1030cf09467d3456f514dd90c9bd.setContent(html_86e777065c8882f0ea5bd66af56edd62);
+            
+        
+
+        circle_marker_30424d52b3bc9039ca962c0198d488c3.bindPopup(popup_fc4c1030cf09467d3456f514dd90c9bd)
+        ;
+
+        
+    
+    
+            var circle_marker_fec91c42d7d81dc554d166ba6e8ea8a3 = L.circleMarker(
+                [48.5563, -123.1859],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_121710f718e361e805e09123161ed8bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2cead1cbde8037c8f824854d07e5ed38 = $(`<div id="html_2cead1cbde8037c8f824854d07e5ed38" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 73/126<br>                 Date: 2025-10-15 08:14:12<br>                 Speed: 12.9 knots<br>                 Course: 152.7°<br>                 Lat: 48.5563<br>                 Lon: -123.1859                 </div>`)[0];
+                popup_121710f718e361e805e09123161ed8bd.setContent(html_2cead1cbde8037c8f824854d07e5ed38);
+            
+        
+
+        circle_marker_fec91c42d7d81dc554d166ba6e8ea8a3.bindPopup(popup_121710f718e361e805e09123161ed8bd)
+        ;
+
+        
+    
+    
+            var circle_marker_076e50995d838acbebd4cb4083648e9e = L.circleMarker(
+                [48.556, -123.1857],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_54141b32efd8fb2631b56ec5380696cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb4ad9b4c381a967c95277de7579ab03 = $(`<div id="html_eb4ad9b4c381a967c95277de7579ab03" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 74/126<br>                 Date: 2025-10-15 08:14:22<br>                 Speed: 12.9 knots<br>                 Course: 152.5°<br>                 Lat: 48.5560<br>                 Lon: -123.1857                 </div>`)[0];
+                popup_54141b32efd8fb2631b56ec5380696cc.setContent(html_eb4ad9b4c381a967c95277de7579ab03);
+            
+        
+
+        circle_marker_076e50995d838acbebd4cb4083648e9e.bindPopup(popup_54141b32efd8fb2631b56ec5380696cc)
+        ;
+
+        
+    
+    
+            var circle_marker_c5d39073f3e2c6669379529694661ad9 = L.circleMarker(
+                [48.5553, -123.1852],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a6854043181ea58cdb0b0576152ef38e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eded2b0914ce61a1d3fd24a466d75356 = $(`<div id="html_eded2b0914ce61a1d3fd24a466d75356" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 75/126<br>                 Date: 2025-10-15 08:14:31<br>                 Speed: 12.9 knots<br>                 Course: 152.4°<br>                 Lat: 48.5553<br>                 Lon: -123.1852                 </div>`)[0];
+                popup_a6854043181ea58cdb0b0576152ef38e.setContent(html_eded2b0914ce61a1d3fd24a466d75356);
+            
+        
+
+        circle_marker_c5d39073f3e2c6669379529694661ad9.bindPopup(popup_a6854043181ea58cdb0b0576152ef38e)
+        ;
+
+        
+    
+    
+            var circle_marker_f9c75f6cddf165c938c6342d7b54e38f = L.circleMarker(
+                [48.5548, -123.1847],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_c8eefcecd74c00335a9ec4d0dc1ccd5a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3cc7b77190e33f525943b60773db27ce = $(`<div id="html_3cc7b77190e33f525943b60773db27ce" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 76/126<br>                 Date: 2025-10-15 08:14:42<br>                 Speed: 12.9 knots<br>                 Course: 153.4°<br>                 Lat: 48.5548<br>                 Lon: -123.1847                 </div>`)[0];
+                popup_c8eefcecd74c00335a9ec4d0dc1ccd5a.setContent(html_3cc7b77190e33f525943b60773db27ce);
+            
+        
+
+        circle_marker_f9c75f6cddf165c938c6342d7b54e38f.bindPopup(popup_c8eefcecd74c00335a9ec4d0dc1ccd5a)
+        ;
+
+        
+    
+    
+            var circle_marker_05ce0807e61ad4d1cebc41e8a9625146 = L.circleMarker(
+                [48.5542, -123.1844],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_87b8748178e12ff91f3eefef3107ddcd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1184da845836637fa839b9cab3d7596c = $(`<div id="html_1184da845836637fa839b9cab3d7596c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 77/126<br>                 Date: 2025-10-15 08:14:51<br>                 Speed: 12.9 knots<br>                 Course: 153.7°<br>                 Lat: 48.5542<br>                 Lon: -123.1844                 </div>`)[0];
+                popup_87b8748178e12ff91f3eefef3107ddcd.setContent(html_1184da845836637fa839b9cab3d7596c);
+            
+        
+
+        circle_marker_05ce0807e61ad4d1cebc41e8a9625146.bindPopup(popup_87b8748178e12ff91f3eefef3107ddcd)
+        ;
+
+        
+    
+    
+            var circle_marker_3fea6a5e1a9b9e9168751a246e88ddd9 = L.circleMarker(
+                [48.5535, -123.1838],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5fcecbba97dc268b395e624df22c387c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37b6e7cd313e37a68b3ac66d2f1aa1a4 = $(`<div id="html_37b6e7cd313e37a68b3ac66d2f1aa1a4" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 78/126<br>                 Date: 2025-10-15 08:15:03<br>                 Speed: 12.9 knots<br>                 Course: 154.3°<br>                 Lat: 48.5535<br>                 Lon: -123.1838                 </div>`)[0];
+                popup_5fcecbba97dc268b395e624df22c387c.setContent(html_37b6e7cd313e37a68b3ac66d2f1aa1a4);
+            
+        
+
+        circle_marker_3fea6a5e1a9b9e9168751a246e88ddd9.bindPopup(popup_5fcecbba97dc268b395e624df22c387c)
+        ;
+
+        
+    
+    
+            var circle_marker_3179e48a86e464371bd56a898c18c183 = L.circleMarker(
+                [48.5531, -123.1835],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_936c061796b2d6154ad3bcbff216cbcb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d15922c61f6e84d456cb6d19a0bfd46c = $(`<div id="html_d15922c61f6e84d456cb6d19a0bfd46c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 79/126<br>                 Date: 2025-10-15 08:15:12<br>                 Speed: 12.9 knots<br>                 Course: 156.0°<br>                 Lat: 48.5531<br>                 Lon: -123.1835                 </div>`)[0];
+                popup_936c061796b2d6154ad3bcbff216cbcb.setContent(html_d15922c61f6e84d456cb6d19a0bfd46c);
+            
+        
+
+        circle_marker_3179e48a86e464371bd56a898c18c183.bindPopup(popup_936c061796b2d6154ad3bcbff216cbcb)
+        ;
+
+        
+    
+    
+            var circle_marker_bf53725cc9709929602f3c49b1aaf915 = L.circleMarker(
+                [48.5528, -123.1833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_f74f3ebc216131e05729a6a516b9fba8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4563ebabbcf470741029bcc94ff775f6 = $(`<div id="html_4563ebabbcf470741029bcc94ff775f6" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 80/126<br>                 Date: 2025-10-15 08:15:20<br>                 Speed: 12.9 knots<br>                 Course: 155.1°<br>                 Lat: 48.5528<br>                 Lon: -123.1833                 </div>`)[0];
+                popup_f74f3ebc216131e05729a6a516b9fba8.setContent(html_4563ebabbcf470741029bcc94ff775f6);
+            
+        
+
+        circle_marker_bf53725cc9709929602f3c49b1aaf915.bindPopup(popup_f74f3ebc216131e05729a6a516b9fba8)
+        ;
+
+        
+    
+    
+            var circle_marker_7ee11134387bfa8bf4ceb1e6ee86b9df = L.circleMarker(
+                [48.5521, -123.1828],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_20fcb84e17d4163314422ff30fb7b3ec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_729fca81112b054d36ead4f59fe8e0c0 = $(`<div id="html_729fca81112b054d36ead4f59fe8e0c0" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 81/126<br>                 Date: 2025-10-15 08:15:31<br>                 Speed: 12.9 knots<br>                 Course: 155.0°<br>                 Lat: 48.5521<br>                 Lon: -123.1828                 </div>`)[0];
+                popup_20fcb84e17d4163314422ff30fb7b3ec.setContent(html_729fca81112b054d36ead4f59fe8e0c0);
+            
+        
+
+        circle_marker_7ee11134387bfa8bf4ceb1e6ee86b9df.bindPopup(popup_20fcb84e17d4163314422ff30fb7b3ec)
+        ;
+
+        
+    
+    
+            var circle_marker_a41d04711376c6f630ff75899abfa728 = L.circleMarker(
+                [48.5515, -123.1824],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_e02d46fb497d49068d34c1db9afe41e9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81e659b71cb3b65c2ecdb8061cc566be = $(`<div id="html_81e659b71cb3b65c2ecdb8061cc566be" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 82/126<br>                 Date: 2025-10-15 08:15:42<br>                 Speed: 13.0 knots<br>                 Course: 154.5°<br>                 Lat: 48.5515<br>                 Lon: -123.1824                 </div>`)[0];
+                popup_e02d46fb497d49068d34c1db9afe41e9.setContent(html_81e659b71cb3b65c2ecdb8061cc566be);
+            
+        
+
+        circle_marker_a41d04711376c6f630ff75899abfa728.bindPopup(popup_e02d46fb497d49068d34c1db9afe41e9)
+        ;
+
+        
+    
+    
+            var circle_marker_8d5a002400d4358accbf85f2145dd499 = L.circleMarker(
+                [48.5509, -123.182],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_721512cc9ef623e02c68af1918bbe56a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b59ad899d0f6cafac44edcb301f1d323 = $(`<div id="html_b59ad899d0f6cafac44edcb301f1d323" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 83/126<br>                 Date: 2025-10-15 08:15:51<br>                 Speed: 13.0 knots<br>                 Course: 153.8°<br>                 Lat: 48.5509<br>                 Lon: -123.1820                 </div>`)[0];
+                popup_721512cc9ef623e02c68af1918bbe56a.setContent(html_b59ad899d0f6cafac44edcb301f1d323);
+            
+        
+
+        circle_marker_8d5a002400d4358accbf85f2145dd499.bindPopup(popup_721512cc9ef623e02c68af1918bbe56a)
+        ;
+
+        
+    
+    
+            var circle_marker_50895cea9a76be75ab199a405749972d = L.circleMarker(
+                [48.5506, -123.1817],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_89dd49e8a3dfcc0fd63a56bc64fb5690 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a8cd05dbe0306a6cfe651042a8528419 = $(`<div id="html_a8cd05dbe0306a6cfe651042a8528419" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 84/126<br>                 Date: 2025-10-15 08:16:01<br>                 Speed: 13.0 knots<br>                 Course: 153.3°<br>                 Lat: 48.5506<br>                 Lon: -123.1817                 </div>`)[0];
+                popup_89dd49e8a3dfcc0fd63a56bc64fb5690.setContent(html_a8cd05dbe0306a6cfe651042a8528419);
+            
+        
+
+        circle_marker_50895cea9a76be75ab199a405749972d.bindPopup(popup_89dd49e8a3dfcc0fd63a56bc64fb5690)
+        ;
+
+        
+    
+    
+            var circle_marker_3cee6cdb89d2471a798da0d468d3fba1 = L.circleMarker(
+                [48.5498, -123.1812],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_dfe2138eb730187c4af017e531c3a19d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c08ccb39241400790c6705b047d4857a = $(`<div id="html_c08ccb39241400790c6705b047d4857a" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 85/126<br>                 Date: 2025-10-15 08:16:12<br>                 Speed: 13.0 knots<br>                 Course: 153.3°<br>                 Lat: 48.5498<br>                 Lon: -123.1812                 </div>`)[0];
+                popup_dfe2138eb730187c4af017e531c3a19d.setContent(html_c08ccb39241400790c6705b047d4857a);
+            
+        
+
+        circle_marker_3cee6cdb89d2471a798da0d468d3fba1.bindPopup(popup_dfe2138eb730187c4af017e531c3a19d)
+        ;
+
+        
+    
+    
+            var circle_marker_8815c31286236616ee7e7d793a29b3c1 = L.circleMarker(
+                [48.5494, -123.1809],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_0627e90dcb2422eedb583406e69b2090 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_89e6e8a4dda8c85d905443767036f81f = $(`<div id="html_89e6e8a4dda8c85d905443767036f81f" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 86/126<br>                 Date: 2025-10-15 08:16:22<br>                 Speed: 13.0 knots<br>                 Course: 153.7°<br>                 Lat: 48.5494<br>                 Lon: -123.1809                 </div>`)[0];
+                popup_0627e90dcb2422eedb583406e69b2090.setContent(html_89e6e8a4dda8c85d905443767036f81f);
+            
+        
+
+        circle_marker_8815c31286236616ee7e7d793a29b3c1.bindPopup(popup_0627e90dcb2422eedb583406e69b2090)
+        ;
+
+        
+    
+    
+            var circle_marker_1a1e1affcbd957e27582f07a3e3854da = L.circleMarker(
+                [48.5489, -123.1805],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a18655593c8b4809e5bea95ab529ec20 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea89c52b2d530cd4d973b2e78a5ddba6 = $(`<div id="html_ea89c52b2d530cd4d973b2e78a5ddba6" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 87/126<br>                 Date: 2025-10-15 08:16:31<br>                 Speed: 13.0 knots<br>                 Course: 154.8°<br>                 Lat: 48.5489<br>                 Lon: -123.1805                 </div>`)[0];
+                popup_a18655593c8b4809e5bea95ab529ec20.setContent(html_ea89c52b2d530cd4d973b2e78a5ddba6);
+            
+        
+
+        circle_marker_1a1e1affcbd957e27582f07a3e3854da.bindPopup(popup_a18655593c8b4809e5bea95ab529ec20)
+        ;
+
+        
+    
+    
+            var circle_marker_559cc8afc18454f8e95a7008f3fd5f63 = L.circleMarker(
+                [48.5483, -123.1801],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_3432ec55a208db65b94e7cabeabb4ee3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02538310a3f57cdd53d7e83288b7741c = $(`<div id="html_02538310a3f57cdd53d7e83288b7741c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 88/126<br>                 Date: 2025-10-15 08:16:42<br>                 Speed: 13.0 knots<br>                 Course: 155.7°<br>                 Lat: 48.5483<br>                 Lon: -123.1801                 </div>`)[0];
+                popup_3432ec55a208db65b94e7cabeabb4ee3.setContent(html_02538310a3f57cdd53d7e83288b7741c);
+            
+        
+
+        circle_marker_559cc8afc18454f8e95a7008f3fd5f63.bindPopup(popup_3432ec55a208db65b94e7cabeabb4ee3)
+        ;
+
+        
+    
+    
+            var circle_marker_d35e0667286b90f243073995692a1859 = L.circleMarker(
+                [48.5476, -123.1796],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_8e2f0b20cb570375953c733ef1646b48 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b01668203f2b522d7af1d9a0991d5b39 = $(`<div id="html_b01668203f2b522d7af1d9a0991d5b39" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 89/126<br>                 Date: 2025-10-15 08:16:51<br>                 Speed: 13.0 knots<br>                 Course: 156.7°<br>                 Lat: 48.5476<br>                 Lon: -123.1796                 </div>`)[0];
+                popup_8e2f0b20cb570375953c733ef1646b48.setContent(html_b01668203f2b522d7af1d9a0991d5b39);
+            
+        
+
+        circle_marker_d35e0667286b90f243073995692a1859.bindPopup(popup_8e2f0b20cb570375953c733ef1646b48)
+        ;
+
+        
+    
+    
+            var circle_marker_8f66ba19adac6a46e0697fb002b3512b = L.circleMarker(
+                [48.5473, -123.1794],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_ee266f8e793691c95e0f6cd015f2848a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_efbcaf8ddc0c82548344b4f4e1e88730 = $(`<div id="html_efbcaf8ddc0c82548344b4f4e1e88730" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 90/126<br>                 Date: 2025-10-15 08:17:01<br>                 Speed: 13.0 knots<br>                 Course: 157.4°<br>                 Lat: 48.5473<br>                 Lon: -123.1794                 </div>`)[0];
+                popup_ee266f8e793691c95e0f6cd015f2848a.setContent(html_efbcaf8ddc0c82548344b4f4e1e88730);
+            
+        
+
+        circle_marker_8f66ba19adac6a46e0697fb002b3512b.bindPopup(popup_ee266f8e793691c95e0f6cd015f2848a)
+        ;
+
+        
+    
+    
+            var circle_marker_19764985434a38f96a5be568d8c4dbeb = L.circleMarker(
+                [48.5465, -123.1789],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_0f0f50ecbf46b566125eabffa54f626d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62fd06b7c58b8887b64cd1a9760d4028 = $(`<div id="html_62fd06b7c58b8887b64cd1a9760d4028" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 91/126<br>                 Date: 2025-10-15 08:17:12<br>                 Speed: 13.0 knots<br>                 Course: 158.5°<br>                 Lat: 48.5465<br>                 Lon: -123.1789                 </div>`)[0];
+                popup_0f0f50ecbf46b566125eabffa54f626d.setContent(html_62fd06b7c58b8887b64cd1a9760d4028);
+            
+        
+
+        circle_marker_19764985434a38f96a5be568d8c4dbeb.bindPopup(popup_0f0f50ecbf46b566125eabffa54f626d)
+        ;
+
+        
+    
+    
+            var circle_marker_5141e752b427ba4721bdadec884146b1 = L.circleMarker(
+                [48.546, -123.1786],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_ef4a40bca03535c6368c949cca1b579d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_62c0a259ee09f89847b74afb4097e39a = $(`<div id="html_62c0a259ee09f89847b74afb4097e39a" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 92/126<br>                 Date: 2025-10-15 08:17:22<br>                 Speed: 12.9 knots<br>                 Course: 159.9°<br>                 Lat: 48.5460<br>                 Lon: -123.1786                 </div>`)[0];
+                popup_ef4a40bca03535c6368c949cca1b579d.setContent(html_62c0a259ee09f89847b74afb4097e39a);
+            
+        
+
+        circle_marker_5141e752b427ba4721bdadec884146b1.bindPopup(popup_ef4a40bca03535c6368c949cca1b579d)
+        ;
+
+        
+    
+    
+            var circle_marker_9591978474a67ef0a535def1d5162f98 = L.circleMarker(
+                [48.5455, -123.1784],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_1b07dd14509be43dce1ce0fa3c05709f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_16de41aa3210640fc4bf6ffb40bdcca8 = $(`<div id="html_16de41aa3210640fc4bf6ffb40bdcca8" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 93/126<br>                 Date: 2025-10-15 08:17:31<br>                 Speed: 12.9 knots<br>                 Course: 158.5°<br>                 Lat: 48.5455<br>                 Lon: -123.1784                 </div>`)[0];
+                popup_1b07dd14509be43dce1ce0fa3c05709f.setContent(html_16de41aa3210640fc4bf6ffb40bdcca8);
+            
+        
+
+        circle_marker_9591978474a67ef0a535def1d5162f98.bindPopup(popup_1b07dd14509be43dce1ce0fa3c05709f)
+        ;
+
+        
+    
+    
+            var circle_marker_53804e66b9305decb1e24d0b6df0bcef = L.circleMarker(
+                [48.5451, -123.1781],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_947362a2ab204d5b8ae3776115e0cbf7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_17c6a0fb8f5c0dbc025d50638de59813 = $(`<div id="html_17c6a0fb8f5c0dbc025d50638de59813" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 94/126<br>                 Date: 2025-10-15 08:17:37<br>                 Speed: 13.0 knots<br>                 Course: 158.2°<br>                 Lat: 48.5451<br>                 Lon: -123.1781                 </div>`)[0];
+                popup_947362a2ab204d5b8ae3776115e0cbf7.setContent(html_17c6a0fb8f5c0dbc025d50638de59813);
+            
+        
+
+        circle_marker_53804e66b9305decb1e24d0b6df0bcef.bindPopup(popup_947362a2ab204d5b8ae3776115e0cbf7)
+        ;
+
+        
+    
+    
+            var circle_marker_d04c842b6f1a2daf3dfeaad723e8dc73 = L.circleMarker(
+                [48.5447, -123.1779],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_d6336132b76e6a16f7cd75dc3aa1f10e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d232b69cc89dd400965262c7f0e95dcc = $(`<div id="html_d232b69cc89dd400965262c7f0e95dcc" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 95/126<br>                 Date: 2025-10-15 08:17:45<br>                 Speed: 12.9 knots<br>                 Course: 156.5°<br>                 Lat: 48.5447<br>                 Lon: -123.1779                 </div>`)[0];
+                popup_d6336132b76e6a16f7cd75dc3aa1f10e.setContent(html_d232b69cc89dd400965262c7f0e95dcc);
+            
+        
+
+        circle_marker_d04c842b6f1a2daf3dfeaad723e8dc73.bindPopup(popup_d6336132b76e6a16f7cd75dc3aa1f10e)
+        ;
+
+        
+    
+    
+            var circle_marker_872b7faedf67684dfa4227ee360dc51d = L.circleMarker(
+                [48.5444, -123.1776],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_9484b59f26a4c11e0094075d0b1fe092 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d49539542b36b15714aacd1c82ef9ac4 = $(`<div id="html_d49539542b36b15714aacd1c82ef9ac4" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 96/126<br>                 Date: 2025-10-15 08:17:52<br>                 Speed: 13.0 knots<br>                 Course: 156.4°<br>                 Lat: 48.5444<br>                 Lon: -123.1776                 </div>`)[0];
+                popup_9484b59f26a4c11e0094075d0b1fe092.setContent(html_d49539542b36b15714aacd1c82ef9ac4);
+            
+        
+
+        circle_marker_872b7faedf67684dfa4227ee360dc51d.bindPopup(popup_9484b59f26a4c11e0094075d0b1fe092)
+        ;
+
+        
+    
+    
+            var circle_marker_01e03b0ed692bbbbe8a49a4b727700d6 = L.circleMarker(
+                [48.5438, -123.1773],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_80b7db31cf6fc9a6a3587542050ff814 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f834672904b61bff807f69b124c87845 = $(`<div id="html_f834672904b61bff807f69b124c87845" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 97/126<br>                 Date: 2025-10-15 08:18:01<br>                 Speed: 13.0 knots<br>                 Course: 156.3°<br>                 Lat: 48.5438<br>                 Lon: -123.1773                 </div>`)[0];
+                popup_80b7db31cf6fc9a6a3587542050ff814.setContent(html_f834672904b61bff807f69b124c87845);
+            
+        
+
+        circle_marker_01e03b0ed692bbbbe8a49a4b727700d6.bindPopup(popup_80b7db31cf6fc9a6a3587542050ff814)
+        ;
+
+        
+    
+    
+            var circle_marker_b450dbbdad6536718ca31411ccd06bd0 = L.circleMarker(
+                [48.5432, -123.1769],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_1b72abae10ce0e6a61f24941a4d0a8c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6022cc85d462cc4bc8074d6ac4ca2a52 = $(`<div id="html_6022cc85d462cc4bc8074d6ac4ca2a52" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 98/126<br>                 Date: 2025-10-15 08:18:12<br>                 Speed: 13.0 knots<br>                 Course: 156.3°<br>                 Lat: 48.5432<br>                 Lon: -123.1769                 </div>`)[0];
+                popup_1b72abae10ce0e6a61f24941a4d0a8c7.setContent(html_6022cc85d462cc4bc8074d6ac4ca2a52);
+            
+        
+
+        circle_marker_b450dbbdad6536718ca31411ccd06bd0.bindPopup(popup_1b72abae10ce0e6a61f24941a4d0a8c7)
+        ;
+
+        
+    
+    
+            var circle_marker_6dfea40f0e624c1d3324d26524ce6a07 = L.circleMarker(
+                [48.5427, -123.1766],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_50efe97292dd0859c66b7078c5b0ce1c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_22d90279258fc71a4bf07920121734b2 = $(`<div id="html_22d90279258fc71a4bf07920121734b2" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 99/126<br>                 Date: 2025-10-15 08:18:22<br>                 Speed: 13.1 knots<br>                 Course: 156.3°<br>                 Lat: 48.5427<br>                 Lon: -123.1766                 </div>`)[0];
+                popup_50efe97292dd0859c66b7078c5b0ce1c.setContent(html_22d90279258fc71a4bf07920121734b2);
+            
+        
+
+        circle_marker_6dfea40f0e624c1d3324d26524ce6a07.bindPopup(popup_50efe97292dd0859c66b7078c5b0ce1c)
+        ;
+
+        
+    
+    
+            var circle_marker_531e8a4609c8a0374c3889e2a4564652 = L.circleMarker(
+                [48.5421, -123.1762],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_40f4058598094f2a4a2d4e03bd024e0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_590a58436941464f4b013eadf2fecd53 = $(`<div id="html_590a58436941464f4b013eadf2fecd53" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 100/126<br>                 Date: 2025-10-15 08:18:31<br>                 Speed: 13.0 knots<br>                 Course: 154.5°<br>                 Lat: 48.5421<br>                 Lon: -123.1762                 </div>`)[0];
+                popup_40f4058598094f2a4a2d4e03bd024e0c.setContent(html_590a58436941464f4b013eadf2fecd53);
+            
+        
+
+        circle_marker_531e8a4609c8a0374c3889e2a4564652.bindPopup(popup_40f4058598094f2a4a2d4e03bd024e0c)
+        ;
+
+        
+    
+    
+            var circle_marker_803cf80746992054fbe8e745ce75af8c = L.circleMarker(
+                [48.5418, -123.1759],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_233b96b60ed8a69409608ec36b4e4c51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_996b15906dc2d967eab29a7b0729851c = $(`<div id="html_996b15906dc2d967eab29a7b0729851c" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 101/126<br>                 Date: 2025-10-15 08:18:40<br>                 Speed: 13.1 knots<br>                 Course: 155.7°<br>                 Lat: 48.5418<br>                 Lon: -123.1759                 </div>`)[0];
+                popup_233b96b60ed8a69409608ec36b4e4c51.setContent(html_996b15906dc2d967eab29a7b0729851c);
+            
+        
+
+        circle_marker_803cf80746992054fbe8e745ce75af8c.bindPopup(popup_233b96b60ed8a69409608ec36b4e4c51)
+        ;
+
+        
+    
+    
+            var circle_marker_26e81e08d5b8cd3c9ac82b01236f53b5 = L.circleMarker(
+                [48.5413, -123.1756],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_e5c2544dbf2395ad785e0d8389ef792e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_27ebc61a0f150be6c55f0568820eeb96 = $(`<div id="html_27ebc61a0f150be6c55f0568820eeb96" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 102/126<br>                 Date: 2025-10-15 08:18:48<br>                 Speed: 13.1 knots<br>                 Course: 155.9°<br>                 Lat: 48.5413<br>                 Lon: -123.1756                 </div>`)[0];
+                popup_e5c2544dbf2395ad785e0d8389ef792e.setContent(html_27ebc61a0f150be6c55f0568820eeb96);
+            
+        
+
+        circle_marker_26e81e08d5b8cd3c9ac82b01236f53b5.bindPopup(popup_e5c2544dbf2395ad785e0d8389ef792e)
+        ;
+
+        
+    
+    
+            var circle_marker_13517e633c7ac729e1cf99d705d16947 = L.circleMarker(
+                [48.5405, -123.1751],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_6e0ab8e3fb78ea14d88eeb38b41b29cd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e5dc02d7b0facccaf229690b0b2b57b5 = $(`<div id="html_e5dc02d7b0facccaf229690b0b2b57b5" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 103/126<br>                 Date: 2025-10-15 08:19:01<br>                 Speed: 13.1 knots<br>                 Course: 157.5°<br>                 Lat: 48.5405<br>                 Lon: -123.1751                 </div>`)[0];
+                popup_6e0ab8e3fb78ea14d88eeb38b41b29cd.setContent(html_e5dc02d7b0facccaf229690b0b2b57b5);
+            
+        
+
+        circle_marker_13517e633c7ac729e1cf99d705d16947.bindPopup(popup_6e0ab8e3fb78ea14d88eeb38b41b29cd)
+        ;
+
+        
+    
+    
+            var circle_marker_d2a1cb876dd952e27043524c9f148c5d = L.circleMarker(
+                [48.54, -123.1747],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_50d08244c622c77f3c137c8a7f0232c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bb43bd7e31a0e24c627c7dbd60f7c163 = $(`<div id="html_bb43bd7e31a0e24c627c7dbd60f7c163" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 104/126<br>                 Date: 2025-10-15 08:19:10<br>                 Speed: 13.1 knots<br>                 Course: 157.5°<br>                 Lat: 48.5400<br>                 Lon: -123.1747                 </div>`)[0];
+                popup_50d08244c622c77f3c137c8a7f0232c1.setContent(html_bb43bd7e31a0e24c627c7dbd60f7c163);
+            
+        
+
+        circle_marker_d2a1cb876dd952e27043524c9f148c5d.bindPopup(popup_50d08244c622c77f3c137c8a7f0232c1)
+        ;
+
+        
+    
+    
+            var circle_marker_a0d372d5a179589f5f381d6dabae7c14 = L.circleMarker(
+                [48.5394, -123.1744],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_17831d0bcb13f08a54337d7eb4071710 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4d7a9f86c5fab6c2aa556c9722df01fb = $(`<div id="html_4d7a9f86c5fab6c2aa556c9722df01fb" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 105/126<br>                 Date: 2025-10-15 08:19:22<br>                 Speed: 13.1 knots<br>                 Course: 158.1°<br>                 Lat: 48.5394<br>                 Lon: -123.1744                 </div>`)[0];
+                popup_17831d0bcb13f08a54337d7eb4071710.setContent(html_4d7a9f86c5fab6c2aa556c9722df01fb);
+            
+        
+
+        circle_marker_a0d372d5a179589f5f381d6dabae7c14.bindPopup(popup_17831d0bcb13f08a54337d7eb4071710)
+        ;
+
+        
+    
+    
+            var circle_marker_63bfb065a8f6e87298ab5b05946a0db7 = L.circleMarker(
+                [48.5388, -123.174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_07978e1ad1b320e56a1ef546fcc4faeb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_777140d2c8cb8ca9d0134907ac198375 = $(`<div id="html_777140d2c8cb8ca9d0134907ac198375" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 106/126<br>                 Date: 2025-10-15 08:19:31<br>                 Speed: 13.2 knots<br>                 Course: 157.7°<br>                 Lat: 48.5388<br>                 Lon: -123.1740                 </div>`)[0];
+                popup_07978e1ad1b320e56a1ef546fcc4faeb.setContent(html_777140d2c8cb8ca9d0134907ac198375);
+            
+        
+
+        circle_marker_63bfb065a8f6e87298ab5b05946a0db7.bindPopup(popup_07978e1ad1b320e56a1ef546fcc4faeb)
+        ;
+
+        
+    
+    
+            var circle_marker_9f0770404460d9678daae504ff5d7c17 = L.circleMarker(
+                [48.5384, -123.1738],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_66e96e561bcbf4b939bec8123c4a81d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95a86b86b2c79a3caa00ce38f5f9f87e = $(`<div id="html_95a86b86b2c79a3caa00ce38f5f9f87e" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 107/126<br>                 Date: 2025-10-15 08:19:38<br>                 Speed: 13.1 knots<br>                 Course: 157.2°<br>                 Lat: 48.5384<br>                 Lon: -123.1738                 </div>`)[0];
+                popup_66e96e561bcbf4b939bec8123c4a81d7.setContent(html_95a86b86b2c79a3caa00ce38f5f9f87e);
+            
+        
+
+        circle_marker_9f0770404460d9678daae504ff5d7c17.bindPopup(popup_66e96e561bcbf4b939bec8123c4a81d7)
+        ;
+
+        
+    
+    
+            var circle_marker_04a85239866b47facc15aa1e1e1b67d7 = L.circleMarker(
+                [48.5377, -123.1733],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_370e21fde92c064e49bb632d5155a71d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff4b90b7b621b3d814dc57c4b6ee03b2 = $(`<div id="html_ff4b90b7b621b3d814dc57c4b6ee03b2" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 108/126<br>                 Date: 2025-10-15 08:19:52<br>                 Speed: 13.2 knots<br>                 Course: 156.7°<br>                 Lat: 48.5377<br>                 Lon: -123.1733                 </div>`)[0];
+                popup_370e21fde92c064e49bb632d5155a71d.setContent(html_ff4b90b7b621b3d814dc57c4b6ee03b2);
+            
+        
+
+        circle_marker_04a85239866b47facc15aa1e1e1b67d7.bindPopup(popup_370e21fde92c064e49bb632d5155a71d)
+        ;
+
+        
+    
+    
+            var circle_marker_5908ccf56a974fe81bc3d8ef8e182480 = L.circleMarker(
+                [48.5372, -123.173],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_c20b4d33e2f804871874529be1364ca0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0cdd962d5b885d791810fd929b5d611e = $(`<div id="html_0cdd962d5b885d791810fd929b5d611e" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 109/126<br>                 Date: 2025-10-15 08:20:01<br>                 Speed: 13.2 knots<br>                 Course: 156.5°<br>                 Lat: 48.5372<br>                 Lon: -123.1730                 </div>`)[0];
+                popup_c20b4d33e2f804871874529be1364ca0.setContent(html_0cdd962d5b885d791810fd929b5d611e);
+            
+        
+
+        circle_marker_5908ccf56a974fe81bc3d8ef8e182480.bindPopup(popup_c20b4d33e2f804871874529be1364ca0)
+        ;
+
+        
+    
+    
+            var circle_marker_982e1f673c7c6c5903d0923a603ce984 = L.circleMarker(
+                [48.5365, -123.1725],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_c1c4ca0c64fe71528a706447aaa1b996 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d1320d7939291d7f34c69fa84366e7d4 = $(`<div id="html_d1320d7939291d7f34c69fa84366e7d4" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 110/126<br>                 Date: 2025-10-15 08:20:12<br>                 Speed: 13.2 knots<br>                 Course: 155.1°<br>                 Lat: 48.5365<br>                 Lon: -123.1725                 </div>`)[0];
+                popup_c1c4ca0c64fe71528a706447aaa1b996.setContent(html_d1320d7939291d7f34c69fa84366e7d4);
+            
+        
+
+        circle_marker_982e1f673c7c6c5903d0923a603ce984.bindPopup(popup_c1c4ca0c64fe71528a706447aaa1b996)
+        ;
+
+        
+    
+    
+            var circle_marker_ac97e387e40440fe5427476837bc4082 = L.circleMarker(
+                [48.536, -123.1722],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a9ca5953cbf7fc2dbcb2ea9b3c64a093 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61204c75863eaa9c4c2327795caf5109 = $(`<div id="html_61204c75863eaa9c4c2327795caf5109" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 111/126<br>                 Date: 2025-10-15 08:20:22<br>                 Speed: 13.2 knots<br>                 Course: 154.6°<br>                 Lat: 48.5360<br>                 Lon: -123.1722                 </div>`)[0];
+                popup_a9ca5953cbf7fc2dbcb2ea9b3c64a093.setContent(html_61204c75863eaa9c4c2327795caf5109);
+            
+        
+
+        circle_marker_ac97e387e40440fe5427476837bc4082.bindPopup(popup_a9ca5953cbf7fc2dbcb2ea9b3c64a093)
+        ;
+
+        
+    
+    
+            var circle_marker_694bbe0844297b3342684586886b7f3d = L.circleMarker(
+                [48.5355, -123.1718],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_92a8a2d807fb1bca269ba00d1471f83b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c64d6bef5faa87849f7adf4d814f7d32 = $(`<div id="html_c64d6bef5faa87849f7adf4d814f7d32" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 112/126<br>                 Date: 2025-10-15 08:20:31<br>                 Speed: 13.2 knots<br>                 Course: 154.6°<br>                 Lat: 48.5355<br>                 Lon: -123.1718                 </div>`)[0];
+                popup_92a8a2d807fb1bca269ba00d1471f83b.setContent(html_c64d6bef5faa87849f7adf4d814f7d32);
+            
+        
+
+        circle_marker_694bbe0844297b3342684586886b7f3d.bindPopup(popup_92a8a2d807fb1bca269ba00d1471f83b)
+        ;
+
+        
+    
+    
+            var circle_marker_2bf855d9e1d7402a9c8f4e419b028098 = L.circleMarker(
+                [48.5339, -123.1707],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5c4a752d88524e799eecc04d732eefd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d9819965d7c117646c6d3a4ba259f513 = $(`<div id="html_d9819965d7c117646c6d3a4ba259f513" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 113/126<br>                 Date: 2025-10-15 08:20:59<br>                 Speed: 13.2 knots<br>                 Course: 156.1°<br>                 Lat: 48.5339<br>                 Lon: -123.1707                 </div>`)[0];
+                popup_5c4a752d88524e799eecc04d732eefd9.setContent(html_d9819965d7c117646c6d3a4ba259f513);
+            
+        
+
+        circle_marker_2bf855d9e1d7402a9c8f4e419b028098.bindPopup(popup_5c4a752d88524e799eecc04d732eefd9)
+        ;
+
+        
+    
+    
+            var circle_marker_09240406dbcbbb3c4d8dd8f31233d657 = L.circleMarker(
+                [48.5332, -123.1703],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5a368f659e1fd490aa4fcb511e305d84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_50f622097765a61e353fa90b7783a79f = $(`<div id="html_50f622097765a61e353fa90b7783a79f" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 114/126<br>                 Date: 2025-10-15 08:21:12<br>                 Speed: 13.1 knots<br>                 Course: 157.2°<br>                 Lat: 48.5332<br>                 Lon: -123.1703                 </div>`)[0];
+                popup_5a368f659e1fd490aa4fcb511e305d84.setContent(html_50f622097765a61e353fa90b7783a79f);
+            
+        
+
+        circle_marker_09240406dbcbbb3c4d8dd8f31233d657.bindPopup(popup_5a368f659e1fd490aa4fcb511e305d84)
+        ;
+
+        
+    
+    
+            var circle_marker_5def93440857db47760ca506412270df = L.circleMarker(
+                [48.5325, -123.1698],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_d7754c0cf387c221f944e10815a43c51 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8f626d33bd3a0ffc3b5e2ba3305e7de2 = $(`<div id="html_8f626d33bd3a0ffc3b5e2ba3305e7de2" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 115/126<br>                 Date: 2025-10-15 08:21:22<br>                 Speed: 13.1 knots<br>                 Course: 156.9°<br>                 Lat: 48.5325<br>                 Lon: -123.1698                 </div>`)[0];
+                popup_d7754c0cf387c221f944e10815a43c51.setContent(html_8f626d33bd3a0ffc3b5e2ba3305e7de2);
+            
+        
+
+        circle_marker_5def93440857db47760ca506412270df.bindPopup(popup_d7754c0cf387c221f944e10815a43c51)
+        ;
+
+        
+    
+    
+            var circle_marker_424d63d7bcb816ca9784ad824bbf4d75 = L.circleMarker(
+                [48.532, -123.1695],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_9010c04503a87bec999d551f389a0077 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e10584d637ed92f173eed9971d9fc2b5 = $(`<div id="html_e10584d637ed92f173eed9971d9fc2b5" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 116/126<br>                 Date: 2025-10-15 08:21:31<br>                 Speed: 13.2 knots<br>                 Course: 158.1°<br>                 Lat: 48.5320<br>                 Lon: -123.1695                 </div>`)[0];
+                popup_9010c04503a87bec999d551f389a0077.setContent(html_e10584d637ed92f173eed9971d9fc2b5);
+            
+        
+
+        circle_marker_424d63d7bcb816ca9784ad824bbf4d75.bindPopup(popup_9010c04503a87bec999d551f389a0077)
+        ;
+
+        
+    
+    
+            var circle_marker_c3131ba599ee6f74fa4b187ed9858c1f = L.circleMarker(
+                [48.5315, -123.1692],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_17db2f7e915ca580a0d574310e9ae480 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70adec2e4feacf62bb7b55c2c61a26ec = $(`<div id="html_70adec2e4feacf62bb7b55c2c61a26ec" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 117/126<br>                 Date: 2025-10-15 08:21:42<br>                 Speed: 13.2 knots<br>                 Course: 158.3°<br>                 Lat: 48.5315<br>                 Lon: -123.1692                 </div>`)[0];
+                popup_17db2f7e915ca580a0d574310e9ae480.setContent(html_70adec2e4feacf62bb7b55c2c61a26ec);
+            
+        
+
+        circle_marker_c3131ba599ee6f74fa4b187ed9858c1f.bindPopup(popup_17db2f7e915ca580a0d574310e9ae480)
+        ;
+
+        
+    
+    
+            var circle_marker_bc0c3cb7e2bc0f4e9be631dbd770cd72 = L.circleMarker(
+                [48.5309, -123.1688],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_7130a4070b97d04fe2663d9c0b419d69 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ee69b39b1f6d8f12d5b3525d0bd595a = $(`<div id="html_0ee69b39b1f6d8f12d5b3525d0bd595a" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 118/126<br>                 Date: 2025-10-15 08:21:52<br>                 Speed: 13.2 knots<br>                 Course: 158.2°<br>                 Lat: 48.5309<br>                 Lon: -123.1688                 </div>`)[0];
+                popup_7130a4070b97d04fe2663d9c0b419d69.setContent(html_0ee69b39b1f6d8f12d5b3525d0bd595a);
+            
+        
+
+        circle_marker_bc0c3cb7e2bc0f4e9be631dbd770cd72.bindPopup(popup_7130a4070b97d04fe2663d9c0b419d69)
+        ;
+
+        
+    
+    
+            var circle_marker_3a28bc496c6db253a71467e53fc815a9 = L.circleMarker(
+                [48.5305, -123.1686],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_cac1b963cc919b27b1233f3924d0b903 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f6c3a79097225f0e6ac2aa2f9fa61d6 = $(`<div id="html_0f6c3a79097225f0e6ac2aa2f9fa61d6" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 119/126<br>                 Date: 2025-10-15 08:21:59<br>                 Speed: 13.2 knots<br>                 Course: 157.3°<br>                 Lat: 48.5305<br>                 Lon: -123.1686                 </div>`)[0];
+                popup_cac1b963cc919b27b1233f3924d0b903.setContent(html_0f6c3a79097225f0e6ac2aa2f9fa61d6);
+            
+        
+
+        circle_marker_3a28bc496c6db253a71467e53fc815a9.bindPopup(popup_cac1b963cc919b27b1233f3924d0b903)
+        ;
+
+        
+    
+    
+            var circle_marker_f93cc7e2c3501b39bf2a26f8e9f2afec = L.circleMarker(
+                [48.5292, -123.1677],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_a164d1efccec4ea74427e770fd02902d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_87707caecfe9b00f994f6ec7739a7896 = $(`<div id="html_87707caecfe9b00f994f6ec7739a7896" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 120/126<br>                 Date: 2025-10-15 08:22:22<br>                 Speed: 13.2 knots<br>                 Course: 154.3°<br>                 Lat: 48.5292<br>                 Lon: -123.1677                 </div>`)[0];
+                popup_a164d1efccec4ea74427e770fd02902d.setContent(html_87707caecfe9b00f994f6ec7739a7896);
+            
+        
+
+        circle_marker_f93cc7e2c3501b39bf2a26f8e9f2afec.bindPopup(popup_a164d1efccec4ea74427e770fd02902d)
+        ;
+
+        
+    
+    
+            var circle_marker_dedec6d7d96374532d5098d237206871 = L.circleMarker(
+                [48.5287, -123.1674],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_5ec3b14747d322c0c5979e7648d5862a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f80e6a3bd4dd7a3d9a79a08180b777a7 = $(`<div id="html_f80e6a3bd4dd7a3d9a79a08180b777a7" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 121/126<br>                 Date: 2025-10-15 08:22:32<br>                 Speed: 13.2 knots<br>                 Course: 153.4°<br>                 Lat: 48.5287<br>                 Lon: -123.1674                 </div>`)[0];
+                popup_5ec3b14747d322c0c5979e7648d5862a.setContent(html_f80e6a3bd4dd7a3d9a79a08180b777a7);
+            
+        
+
+        circle_marker_dedec6d7d96374532d5098d237206871.bindPopup(popup_5ec3b14747d322c0c5979e7648d5862a)
+        ;
+
+        
+    
+    
+            var circle_marker_5eea37a14a04a5696a2713db78a0332c = L.circleMarker(
+                [48.5265, -123.1658],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_7270ca13d97e85c252ed90defe7be773 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af1d6f4b0d74cd3311ff43d9329e46b8 = $(`<div id="html_af1d6f4b0d74cd3311ff43d9329e46b8" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 122/126<br>                 Date: 2025-10-15 08:23:06<br>                 Speed: 13.2 knots<br>                 Course: 153.0°<br>                 Lat: 48.5265<br>                 Lon: -123.1658                 </div>`)[0];
+                popup_7270ca13d97e85c252ed90defe7be773.setContent(html_af1d6f4b0d74cd3311ff43d9329e46b8);
+            
+        
+
+        circle_marker_5eea37a14a04a5696a2713db78a0332c.bindPopup(popup_7270ca13d97e85c252ed90defe7be773)
+        ;
+
+        
+    
+    
+            var circle_marker_8b0364093496fcf4f58a10d93f4c9ccc = L.circleMarker(
+                [48.5258, -123.1652],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_1f6a82405b5f01da1c207e9c694137fa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5d4e086dffcae86f531274154029b984 = $(`<div id="html_5d4e086dffcae86f531274154029b984" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 123/126<br>                 Date: 2025-10-15 08:23:19<br>                 Speed: 13.2 knots<br>                 Course: 151.6°<br>                 Lat: 48.5258<br>                 Lon: -123.1652                 </div>`)[0];
+                popup_1f6a82405b5f01da1c207e9c694137fa.setContent(html_5d4e086dffcae86f531274154029b984);
+            
+        
+
+        circle_marker_8b0364093496fcf4f58a10d93f4c9ccc.bindPopup(popup_1f6a82405b5f01da1c207e9c694137fa)
+        ;
+
+        
+    
+    
+            var circle_marker_6e28f112bc439332c2840b6879d16aaf = L.circleMarker(
+                [48.5254, -123.1649],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_423b3e248487bd560a2e51afeca93131 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6d62f7103b2c8fc9eb898029a8f19ce = $(`<div id="html_b6d62f7103b2c8fc9eb898029a8f19ce" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 124/126<br>                 Date: 2025-10-15 08:23:32<br>                 Speed: 13.3 knots<br>                 Course: 151.4°<br>                 Lat: 48.5254<br>                 Lon: -123.1649                 </div>`)[0];
+                popup_423b3e248487bd560a2e51afeca93131.setContent(html_b6d62f7103b2c8fc9eb898029a8f19ce);
+            
+        
+
+        circle_marker_6e28f112bc439332c2840b6879d16aaf.bindPopup(popup_423b3e248487bd560a2e51afeca93131)
+        ;
+
+        
+    
+    
+            var circle_marker_b8723d5a66e513cd3d8e845d738cab4e = L.circleMarker(
+                [48.5249, -123.1644],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+        var popup_55f3d44cd30fb627da46a76b6d383bc3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_054f1c006ef296f6a2ad6ddfb27baae8 = $(`<div id="html_054f1c006ef296f6a2ad6ddfb27baae8" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 125/126<br>                 Date: 2025-10-15 08:23:42<br>                 Speed: 13.3 knots<br>                 Course: 150.7°<br>                 Lat: 48.5249<br>                 Lon: -123.1644                 </div>`)[0];
+                popup_55f3d44cd30fb627da46a76b6d383bc3.setContent(html_054f1c006ef296f6a2ad6ddfb27baae8);
+            
+        
+
+        circle_marker_b8723d5a66e513cd3d8e845d738cab4e.bindPopup(popup_55f3d44cd30fb627da46a76b6d383bc3)
+        ;
+
+        
+    
+    
+            var marker_dfba3739c74fd0446ea92d825bebb184 = L.marker(
+                [48.5243, -123.1639],
+                {
+}
+            ).addTo(map_60c1f18370e1729e6d63d6d04af7bb3b);
+        
+    
+            var icon_4e092e41e984e8403e471c81a29a19ef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "stop",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_dfba3739c74fd0446ea92d825bebb184.setIcon(icon_4e092e41e984e8403e471c81a29a19ef);
+        
+    
+        var popup_b750f02f213f51db8f295de6763adc4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_734acf72d3fbc70ca74c871ea5f89cad = $(`<div id="html_734acf72d3fbc70ca74c871ea5f89cad" style="width: 100.0%; height: 100.0%;">                 Track: 47449460<br>                 Point: 126/126<br>                 Date: 2025-10-15 08:23:52<br>                 Speed: 13.3 knots<br>                 Course: 150.8°<br>                 Lat: 48.5243<br>                 Lon: -123.1639                 </div>`)[0];
+                popup_b750f02f213f51db8f295de6763adc4c.setContent(html_734acf72d3fbc70ca74c871ea5f89cad);
+            
+        
+
+        marker_dfba3739c74fd0446ea92d825bebb184.bindPopup(popup_b750f02f213f51db8f295de6763adc4c)
+        ;
+
+        
+    
+</script>
+</html>
